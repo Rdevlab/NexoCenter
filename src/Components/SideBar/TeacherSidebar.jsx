@@ -28,8 +28,8 @@ const sidelinks = [
   },
 
   {
-    title: "Classes & Courses",
-    path: "/Teacher/Classes & Courses",
+    title: "Classes",
+    path: "/Teacher/Classes",
     Icons: LuBookOpen,
   },
   {
@@ -38,13 +38,13 @@ const sidelinks = [
     Icons: LuClipboardCheck,
   },
   {
-    title: "Exams & Grades",
-    path: "/Teacher/Exams & Grades",
+    title: "Exams",
+    path: "/Teacher/Exams",
     Icons: LuFileQuestion,
   },
   {
-    title: "Payments & Fees",
-    path: "/Teacher/Payments & Fees",
+    title: "Salary",
+    path: "/Teacher/Salary",
     Icons: LuWallet,
   },
 
@@ -68,10 +68,10 @@ const sidelinks = [
 const TeacherSidebar = () => {
   const [showFull, setShowFull] = useState(false);
   return (
-    <div className="flex shrink-0 border-r border-white/10 relative">
+    <div className="flex shrink-0 border-r border-white/10 xl:relative absolute backdrop-blur-xl h-full z-50  ">
       {/* nav main content side */}
       <div
-        className={`shrink-0 flex flex-col p-4 text-sm  ${showFull ? "w-50 " : "w-14"} duration-500 py-6 h-full gap-6`}
+        className={`shrink-0 flex flex-col xl:p-4 p-2 text-sm  ${showFull ? "xl:w-50 w-30 " : "xl:w-14 w-12"} duration-500 py-6 h-full gap-6`}
       >
         {sidelinks.map((item, i) => {
           return (

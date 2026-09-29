@@ -16,6 +16,11 @@ import Users from "./Components/main/Users";
 import LoginForm from "./Components/main/LoginForm";
 import TeacherDashboard from "./Components/main/Payments/Teachers/TeacherDashboard";
 import TeacherSidebar from "./Components/SideBar/TeacherSidebar";
+import TeacherStudents from "./Components/main/Payments/Teachers/TeacherStudents";
+import TeacherClasses from "./Components/main/Payments/Teachers/TeacherClasses";
+import TeacherAttendance from "./Components/main/Payments/Teachers/TeacherAttendance";
+import TeacherExams from "./Components/main/Payments/Teachers/TeacherExams";
+import TeacherReport from "./Components/main/Payments/Teachers/TeacherReport";
 
 const DashboardLayout = (props) => {
   return (
@@ -57,6 +62,26 @@ const TeacherDashboardLayout = (props) => {
         <Route
           path="Dashboard"
           element={<TeacherDashboard logedInPerson={props.logedInPerson} />}
+        />
+        <Route
+          path="Students"
+          element={<TeacherStudents logedInPerson={props.logedInPerson} />}
+        />
+        <Route
+          path="Classes"
+          element={<TeacherClasses logedInPerson={props.logedInPerson} />}
+        />
+        <Route
+          path="Attendance"
+          element={<TeacherAttendance logedInPerson={props.logedInPerson} />}
+        />
+        <Route
+          path="Exams"
+          element={<TeacherExams logedInPerson={props.logedInPerson} />}
+        />
+        <Route
+          path="Reports"
+          element={<TeacherReport logedInPerson={props.logedInPerson} />}
         />
       </Routes>
     </div>

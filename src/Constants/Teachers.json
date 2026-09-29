@@ -6,19 +6,26 @@
     "firstName": "Rohullah",
     "lastName": "Ahmadi",
     "gender": "Male",
-    "dateOfBirth": "2005-04-15",
     "age": 22,
     "email": "rohullahahmadi531@gmail.com",
     "phone": "+93 76 4564 241",
-    "address": "Kabul, Afghanistan",
-    "nationality": "Afghan",
-    "qualification": "Master's in English and Computer",
     "department": "English",
     "subject": "Eng and Computer",
-    "classes": ["Grade 9", "Grade 10", "Grade 11"],
+    "classes": [
+      {
+        "leveName": "let's go one",
+        "round": "A"
+      }
+    ],
     "joiningDate": "2015-03-12",
     "employmentType": "Full Time",
-    "salary": 65000,
+    "salary": [
+      {
+        "round": "",
+        "salary": 0,
+        "salaryState": "paid"
+      }
+    ],
     "state": "Active",
     "emergencyContact": "+93 76 4564 241",
     "attendance": "100%",
@@ -32,19 +39,26 @@
     "firstName": "Attiqullah",
     "lastName": "Mahmodi",
     "gender": "Male",
-    "dateOfBirth": "2005-04-15",
     "age": 0,
     "email": "-",
     "phone": "-",
-    "address": "Kabul, Afghanistan",
-    "nationality": "Afghan",
-    "qualification": "-",
     "department": "-",
     "subject": "-",
-    "classes": ["-"],
+    "classes": [
+      {
+        "leveName": "let's go one",
+        "round": "A"
+      }
+    ],
     "joiningDate": "-",
     "employmentType": "-",
-    "salary": 0,
+    "salary": [
+      {
+        "round": "",
+        "salary": 0,
+        "salaryState": "paid"
+      }
+    ],
     "state": "Active",
     "emergencyContact": "-",
     "attendance": "-",
@@ -58,19 +72,26 @@
     "firstName": "Amin",
     "lastName": "Ahmadi",
     "gender": "Male",
-    "dateOfBirth": "2005-04-15",
     "age": 0,
     "email": "-",
     "phone": "-",
-    "address": "Kabul, Afghanistan",
-    "nationality": "Afghan",
-    "qualification": "-",
     "department": "-",
     "subject": "-",
-    "classes": ["-"],
+    "classes": [
+      {
+        "leveName": "let's go one",
+        "round": "A"
+      }
+    ],
     "joiningDate": "-",
     "employmentType": "-",
-    "salary": 0,
+    "salary": [
+      {
+        "round": "",
+        "salary": 0,
+        "salaryState": "paid"
+      }
+    ],
     "state": "Active",
     "emergencyContact": "-",
     "attendance": "-",

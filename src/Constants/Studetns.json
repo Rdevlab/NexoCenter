@@ -4,8 +4,8 @@
     "name": "Mohamad",
     "fathername": "Naqi",
     "lastname": "Ahmadi",
-    "phone": "093764564241",
-    "email": "www.mohammd@gmail.com",
+    "phone": "-",
+    "email": "-",
     "joinDate": "2026/06/02",
     "presence": "Active",
     "profileImage": "./logo.png",
@@ -13,40 +13,10 @@
       {
         "ClassName": "Let's go one",
         "round": "A",
-        "teacher": "Mr.Ahmadi",
+        "teacher": "tch003",
         "middleTestScore": 40,
         "finalTestScore": 60,
         "fee": 50,
-        "billNumber": "12",
-        "feeState": "paid"
-      },
-      {
-        "ClassName": "Let's go two",
-        "round": "B",
-        "teacher": "Mr.Ahmadi",
-        "middleTestScore": 40,
-        "finalTestScore": 60,
-        "fee": 50,
-        "billNumber": "12",
-        "feeState": "paid"
-      },
-      {
-        "ClassName": "Let's go Three",
-        "round": "C",
-        "teacher": "Mr.Ahmadi",
-        "middleTestScore": 40,
-        "finalTestScore": 60,
-        "fee": 50,
-        "billNumber": "12",
-        "feeState": "paid"
-      },
-      {
-        "ClassName": "Junior One",
-        "round": "D",
-        "teacher": "Mr.Ahmadi",
-        "middleTestScore": 40,
-        "finalTestScore": 60,
-        "fee": 100,
         "billNumber": "12",
         "feeState": "paid"
       }

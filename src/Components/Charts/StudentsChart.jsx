@@ -9,12 +9,12 @@ import {
   ResponsiveContainer,
 } from "recharts";
 const data = [
-  { month: "Jan", students: 1200 },
-  { month: "Feb", students: 1500 },
-  { month: "Mar", students: 1800 },
-  { month: "Apr", students: 1650 },
-  { month: "May", students: 2200 },
-  { month: "Jun", students: 2800 },
+  { month: "Jan", students: 0 },
+  { month: "Feb", students: 0 },
+  { month: "Mar", students: 0 },
+  { month: "Apr", students: 0 },
+  { month: "May", students: 0 },
+  { month: "Jun", students: 0 },
 ];
 
 const StudentsChart = () => {
