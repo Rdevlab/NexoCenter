@@ -48,11 +48,11 @@ const TeacherDashboard = ({ logedInPerson = {} }) => {
       </div>
 
       <section className="flex mb-24 p-6 gap-4 justify-center flex-wrap w-full">
-        <div className="w-40 h-40 flex flex-col items-center gap-4 justify-center p-2 rounded-xl bg-white/4 text-gray-400 ">
+        <div className="max-w-40 w-full h-40 flex flex-col items-center gap-4 justify-center p-2 rounded-xl bg-white/4 text-gray-400 ">
           <h1 className="font-semibold text-xl">Total Students</h1>
           <p className="text-5xl font-bold">0</p>
         </div>
-        <div className="w-40 h-40 flex flex-col items-center gap-4 justify-center p-2 rounded-xl bg-white/4 text-gray-400 ">
+        <div className="max-w-40 w-full h-40 flex flex-col items-center gap-4 justify-center p-2 rounded-xl bg-white/4 text-gray-400 ">
           <h1 className="font-semibold text-xl">Total Classes</h1>
           <p className="text-5xl font-bold">0</p>
         </div>

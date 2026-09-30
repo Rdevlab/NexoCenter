@@ -30,15 +30,14 @@ const LoginForm = (props) => {
   };
 
   return (
-    <div className="w-full h-screen flex items-center justify-center bg-fixed bg-[url('https://images.unsplash.com/photo-1712397943847-e104395a1a8b?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGFyayUyMGJsdWUlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww')] bg-cover bg-center">
+    <div className="w-full h-screen flex pt-10 xl:pt-0 xl:items-center justify-center overflow-scroll bg-fixed bg-[url('https://images.unsplash.com/photo-1712397943847-e104395a1a8b?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGFyayUyMGJsdWUlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww')] bg-cover bg-center">
       <div className="flex flex-col xl:flex-row h-110">
-        <div className="xl:w-80 w-70 h-full backdrop-blur-xl rounded-xl border-8 border-white/3 flex items-center justify-center text-white p-4 bg-white relative">
+        <div className="xl:w-80 w-70 xl:h-full backdrop-blur-xl rounded-xl border-8 border-white/3 flex items-center justify-center text-white p-4 bg-white relative">
           <img src="./logo.png" alt="" />
-          <div className="absolute w-full h-full backdrop-blur-xs"></div>
         </div>
         <form
           onSubmit={handleLogin}
-          className="p-4 rounded-xl shadow-xl border-white/30 backdrop-blur-xl bg-white/2 flex flex-col gap-4 xl:w-96 w-70 flex flex-col items-center justify-center"
+          className="p-2 rounded-xl shadow-xl border-white/30 backdrop-blur-xl bg-white/2 flex flex-col xl:gap-4 xl:w-96 w-70 h-max flex flex-col items-center justify-center"
         >
           <div className="flex items-center justify-center p-4 rounded-full border text-gray-700/10 shadow-xl bg-white/5">
             <LuUser size={50} className="text-gray-500" />
