@@ -32,31 +32,11 @@ const sidelinks = [
     path: "/Teacher/Classes",
     Icons: LuBookOpen,
   },
-  {
-    title: "Attendance",
-    path: "/Teacher/Attendance",
-    Icons: LuClipboardCheck,
-  },
+
   {
     title: "Exams",
     path: "/Teacher/Exams",
     Icons: LuFileQuestion,
-  },
-  {
-    title: "Salary",
-    path: "/Teacher/Salary",
-    Icons: LuWallet,
-  },
-
-  {
-    title: "Schedule",
-    path: "/Teacher/Schedule",
-    Icons: LuCalendarRange,
-  },
-  {
-    title: "Reports",
-    path: "/Teacher/Reports",
-    Icons: BsFileBarGraph,
   },
 
   {
@@ -68,16 +48,16 @@ const sidelinks = [
 const TeacherSidebar = () => {
   const [showFull, setShowFull] = useState(false);
   return (
-    <div className="flex shrink-0 border-r border-white/10 xl:relative absolute backdrop-blur-xl h-full z-50  ">
+    <div className="flex xl:border-r border-white/10 justify-center justify-start xl:relative absolute backdrop-blur-xl h-max xl:h-full w-full xl:w-max  bottom-0 z-10  ">
       {/* nav main content side */}
       <div
-        className={`shrink-0 flex flex-col xl:p-4 p-2 text-sm  ${showFull ? "xl:w-50 w-30 " : "xl:w-14 w-12"} duration-500 py-6 h-full gap-6`}
+        className={` flex overflow-hidden justify-center xl:flex-col xl:p-4 p-2 text-sm  ${showFull ? "xl:w-34 w-full " : "xl:w-14 w-full"} duration-500 xl:py-6 xl:h-max  h-max  gap-6`}
       >
         {sidelinks.map((item, i) => {
           return (
             <NavLink
               className={({ isActive }) => {
-                return `shrink-0 flex items-center gap-2 hover:text-red-500 duration-500 ${
+                return `flex flex-col xl:flex-row items-center gap-2 duration-500 ${
                   isActive ? "text-[var(--green)]" : "text-white"
                 }`;
               }}
@@ -86,7 +66,7 @@ const TeacherSidebar = () => {
             >
               <item.Icons className="shrink-0" size={20} />
               <span
-                className={`${showFull ? "flex animate-[sidelinkappear_.5s_.4s_ease_forwards]" : "animate-[sidelinkdisappear_.4s_ease_forwards]"}   opacity-0 shrink-0 flex duration-400 `}
+                className={`${showFull ? "flex xl:animate-[sidelinkappear_.5s_.4s_ease_forwards]" : "xl:animate-[sidelinkdisappear_.4s_ease_forwards]"}  xl:opacity-0 flex duration-400 `}
               >
                 {item.title}
               </span>
@@ -96,7 +76,7 @@ const TeacherSidebar = () => {
       </div>
       {/* nav content toggler button */}
       <button
-        className=" py-4 bg-white/10 rounded-r-xl -right-5 top-12 cursor-pointer absolute hover:bg-white/20 duration-500"
+        className="hidden xl:flex py-4 bg-white/10 w-max h-max rounded-r-xl -right-5 top-12 cursor-pointer absolute hover:bg-white/20 duration-500"
         onClick={() => {
           showFull ? setShowFull(false) : setShowFull(true);
         }}

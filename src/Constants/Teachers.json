@@ -30,7 +30,7 @@
     "emergencyContact": "+93 76 4564 241",
     "attendance": "100%",
     "performance": "Excellent",
-    "profileImage": "./Teachers/RohullahAhmadi.png"
+    "profileImage": "/Teachers/RohullahAhmadi.png"
   },
   {
     "Id": "tch002",
@@ -40,7 +40,7 @@
     "lastName": "Mahmodi",
     "gender": "Male",
     "age": 0,
-    "email": "-",
+    "email": "attiqulla@gmail.com",
     "phone": "-",
     "department": "-",
     "subject": "-",
@@ -63,7 +63,7 @@
     "emergencyContact": "-",
     "attendance": "-",
     "performance": "Excellent",
-    "profileImage": "-"
+    "profileImage": "/Teachers/RohullahAhmadi.png"
   },
   {
     "Id": "tch003",

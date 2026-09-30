@@ -1,24 +1,25 @@
 [
   {
     "Id": "stu001",
-    "name": "Mohamad",
-    "fathername": "Naqi",
+    "name": "Ali",
+    "fathername": "Mohmad",
     "lastname": "Ahmadi",
     "phone": "-",
     "email": "-",
-    "joinDate": "2026/06/02",
+    "joinDate": "_",
     "presence": "Active",
     "profileImage": "./logo.png",
     "ClassJourny": [
       {
-        "ClassName": "Let's go one",
         "round": "A",
-        "teacher": "tch003",
-        "middleTestScore": 40,
-        "finalTestScore": 60,
-        "fee": 50,
-        "billNumber": "12",
-        "feeState": "paid"
+        "teacher": "tch002",
+        "ClassName": "let's go one",
+        "time": "2:00 - 3:00",
+        "middleTestScore": 0,
+        "finalTestScore": 0,
+        "fee": 0,
+        "billNumber": "_",
+        "feeState": "_"
       }
     ]
   }

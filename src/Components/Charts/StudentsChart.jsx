@@ -9,12 +9,12 @@ import {
   ResponsiveContainer,
 } from "recharts";
 const data = [
-  { month: "Jan", students: 0 },
-  { month: "Feb", students: 0 },
-  { month: "Mar", students: 0 },
-  { month: "Apr", students: 0 },
-  { month: "May", students: 0 },
-  { month: "Jun", students: 0 },
+  { month: "A", students: 0 },
+  { month: "B", students: 0 },
+  { month: "C", students: 0 },
+  { month: "D", students: 0 },
+  { month: "E", students: 0 },
+  { month: "F", students: 0 },
 ];
 
 const StudentsChart = () => {
@@ -24,7 +24,7 @@ const StudentsChart = () => {
         <h2 className="text-lg font-semibold">Students</h2>
       </div>
 
-      <ResponsiveContainer width="100%" height="80%">
+      <ResponsiveContainer width="100%" height="90%">
         <AreaChart data={data}>
           <defs>
             <linearGradient id="pinkGradient" x1="0" y1="0" x2="0" y2="1">
