@@ -12,7 +12,7 @@ const TeacherClasses = (props) => {
           return (
             <div
               key={i}
-              className="w-full flex p-2 gap-8 px-6 text-white/60 border border-white/6 rounded-xl items-center shadow-md"
+              className="w-full flex p-2 gap-8 px-6 text-white bg-white/5 border border-white/6 rounded-xl items-center shadow-md"
             >
               <span className="w-10 h-10 text-xl font-bold rounded-full bg-white/2 shadow-md flex items-center justify-center">
                 {i + 1}

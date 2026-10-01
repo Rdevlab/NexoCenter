@@ -10,6 +10,7 @@ import {
   LuLayoutDashboard,
   LuMessageCircle,
   LuSettings,
+  LuUser,
   LuUsers,
   LuWallet,
 } from "react-icons/lu";
@@ -40,9 +41,9 @@ const sidelinks = [
   },
 
   {
-    title: "Settings",
+    title: "Me",
     path: "/Teacher/Settings",
-    Icons: LuSettings,
+    Icons: LuUser,
   },
 ];
 const TeacherSidebar = () => {
@@ -51,7 +52,7 @@ const TeacherSidebar = () => {
     <div className="flex xl:border-r border-white/10 justify-center justify-start xl:relative absolute backdrop-blur-xl h-max xl:h-full w-full xl:w-max  bottom-0 z-10  ">
       {/* nav main content side */}
       <div
-        className={` flex overflow-hidden justify-center xl:flex-col xl:p-4 p-2 text-xs xl:text-sm  ${showFull ? "xl:w-34 w-full " : "xl:w-14 w-full"} duration-500 xl:py-6 xl:h-max  h-max  xl:gap-6 gap-3`}
+        className={` flex overflow-hidden justify-center xl:flex-col xl:p-4 p-2  text-xs xl:text-sm  ${showFull ? "xl:w-34 w-full " : "xl:w-14 w-full"} duration-500 xl:py-6 xl:h-max  h-max  xl:gap-6 gap-5`}
       >
         {sidelinks.map((item, i) => {
           return (
