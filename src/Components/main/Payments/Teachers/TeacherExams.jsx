@@ -36,10 +36,10 @@ const TeacherExams = (props) => {
             return (
               <div
                 key={i}
-                className="flex gap-4 flex-col overflow-scroll justify-start items-center p-4 rounded-xl shadow-lg border border-white/20 text-white"
+                className="flex gap-4 flex-col overflow-scroll justify-start items-center p-4 rounded-xl shadow-lg border border-green-800 text-white"
               >
-                <span className="p-4 rounded-full border border-white/5 flex items-center justify-center w-10 h-10 bg-white/5">
-                  {ex.round}
+                <span className="px-4  flex rounded-lg border border-green-800 text-green-500 flex items-center justify-center  bg-white/5">
+                  Round {ex.round}
                 </span>
                 {ex.middle_tests.map((md, i) => {
                   return (

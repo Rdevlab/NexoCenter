@@ -1,9 +1,11 @@
 import React from "react";
 import StudentList from "../../../../Constants/Studetns.json";
+import { LuUser } from "react-icons/lu";
 const TeacherStudents = (props) => {
   return (
     <div className="text-white flex flex-col gap-2 overflow-hidden w-full p-6">
-      <header className="w-full p-1 text-center font-bold text-xl rounded-md">
+      <header className="w-full p-1 text-center font-bold text-xl flex items-center justify-center gap-4 rounded-md">
+        <LuUser />
         <h1>Student List</h1>
       </header>
 

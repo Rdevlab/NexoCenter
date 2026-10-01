@@ -58,7 +58,7 @@ const TeacherSidebar = () => {
           return (
             <NavLink
               className={({ isActive }) => {
-                return `flex flex-col xl:flex-row items-center gap-2 duration-500 ${
+                return `flex flex-col xl:flex-row items-center rounded-full gap-2 duration-500 ${
                   isActive ? "text-[var(--green)]" : "text-white"
                 }`;
               }}
