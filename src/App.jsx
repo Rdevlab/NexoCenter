@@ -24,7 +24,7 @@ import TeacherReport from "./Components/main/Payments/Teachers/TeacherReport";
 
 const DashboardLayout = (props) => {
   return (
-    <div className="w-screen h-screen bg-gray-900 flex">
+    <div className="max-w-screen overflow-hidden h-screen bg-gray-900 flex">
       <Sidebar />
       <Routes>
         <Route

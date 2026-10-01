@@ -10,7 +10,7 @@ const Students = () => {
   return (
     <div className="w-full h-full flex overflow-hidden">
       {/* centeral containers */}
-      <div className="w-full h-full flex flex-col gap-4 p-4 overflow-y-scroll">
+      <div className="w-full h-full flex flex-col gap-4 p-4 overflow-y-scroll overflow-x-hidden">
         <div className="w-full h-[50vh] shrink-0 text-green-500">
           <StudentChart />
         </div>
@@ -61,7 +61,7 @@ const Students = () => {
       {/* right side */}
       {/* each student information due to oncick function */}
       <aside
-        className={`p-2 ${RightSidebar ? "" : "translate-x-170"} w-170 text-sm duration-500 absolute top-0 text-white/50 right-0 bottom-0 bg-slate-950 p-4`}
+        className={`p-2 ${RightSidebar ? "" : "xl:translate-x-170 translate-x-full"} xl:w-170 text-sm duration-500 absolute top-0 text-white/50 right-0 bottom-0 bg-slate-950 p-4`}
       >
         <div className="w-full h-full flex flex-col gap-4 items-center relative">
           {/* toggler */}

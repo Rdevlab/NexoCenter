@@ -13,8 +13,10 @@
     "subject": "Eng and Computer",
     "classes": [
       {
-        "leveName": "let's go one",
-        "round": "A"
+        "levelName": "let's go one",
+        "round": "A",
+        "time": "2:00 - 3:00",
+        "classState": "Inprogress"
       }
     ],
     "joiningDate": "2015-03-12",
@@ -46,8 +48,10 @@
     "subject": "-",
     "classes": [
       {
-        "leveName": "let's go one",
-        "round": "A"
+        "levelName": "let's go one",
+        "round": "A",
+        "time": "2:00 - 3:00",
+        "classState": "Inprogress"
       }
     ],
     "joiningDate": "-",
@@ -79,8 +83,10 @@
     "subject": "-",
     "classes": [
       {
-        "leveName": "let's go one",
-        "round": "A"
+        "levelName": "let's go one",
+        "round": "A",
+        "time": "2:00 - 3:00",
+        "classState": "Inprogress"
       }
     ],
     "joiningDate": "-",

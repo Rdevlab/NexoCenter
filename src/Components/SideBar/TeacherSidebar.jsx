@@ -51,7 +51,7 @@ const TeacherSidebar = () => {
     <div className="flex xl:border-r border-white/10 justify-center justify-start xl:relative absolute backdrop-blur-xl h-max xl:h-full w-full xl:w-max  bottom-0 z-10  ">
       {/* nav main content side */}
       <div
-        className={` flex overflow-hidden justify-center xl:flex-col xl:p-4 p-2 text-sm  ${showFull ? "xl:w-34 w-full " : "xl:w-14 w-full"} duration-500 xl:py-6 xl:h-max  h-max  gap-6`}
+        className={` flex overflow-hidden justify-center xl:flex-col xl:p-4 p-2 text-xs xl:text-sm  ${showFull ? "xl:w-34 w-full " : "xl:w-14 w-full"} duration-500 xl:py-6 xl:h-max  h-max  xl:gap-6 gap-3`}
       >
         {sidelinks.map((item, i) => {
           return (
@@ -64,7 +64,7 @@ const TeacherSidebar = () => {
               key={i}
               to={item.path}
             >
-              <item.Icons className="shrink-0" size={20} />
+              <item.Icons className="shrink-0" size={14} />
               <span
                 className={`${showFull ? "flex xl:animate-[sidelinkappear_.5s_.4s_ease_forwards]" : "xl:animate-[sidelinkdisappear_.4s_ease_forwards]"}  xl:opacity-0 flex duration-400 `}
               >

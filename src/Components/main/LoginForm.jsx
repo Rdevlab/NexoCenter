@@ -32,7 +32,7 @@ const LoginForm = (props) => {
   return (
     <div className="w-full h-screen flex pt-10 xl:pt-0 xl:items-center justify-center overflow-scroll bg-fixed bg-[url('https://images.unsplash.com/photo-1712397943847-e104395a1a8b?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZGFyayUyMGJsdWUlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww')] bg-cover bg-center">
       <div className="flex flex-col xl:flex-row h-110">
-        <div className="xl:w-80 w-70 xl:h-full backdrop-blur-xl rounded-xl border-8 border-white/3 flex items-center justify-center text-white p-4 bg-white relative">
+        <div className="xl:w-80 w-70 hidden xl:flex xl:h-full backdrop-blur-xl rounded-xl border-8 border-white/3 flex items-center justify-center text-white p-4 bg-white relative">
           <img src="./logo.png" alt="" />
         </div>
         <form

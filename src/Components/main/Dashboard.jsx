@@ -13,7 +13,7 @@ const Dashboard = ({ logedInPerson = {} }) => {
     .join(" ");
 
   return (
-    <div className="w-full h-full flex flex-col gap-6 p-6 duration-500">
+    <div className="w-full h-full flex flex-col gap-6 overflow-hidden p-6 duration-500">
       {/* logged in user information */}
       <nav className="w-full flex items-center justify-between p-2 px-6 rounded-md bg-gray-800 duration-500 text-white">
         <div className="flex items-center gap-4 text-green-500">
@@ -30,21 +30,20 @@ const Dashboard = ({ logedInPerson = {} }) => {
         </button>
       </nav>
       {/* content section */}
-      <div className="flex flex-col gap-12 w-full h-full text-white/60">
+      <div className="flex flex-col gap-12 w-full h-full overflow-scroll text-white/60">
         {/* header */}
-        <div className="flex items-center gap-4 h-50 justify-between">
+        <div className="flex w-full min-h-180 xl:min-h-auto flex-col xl:flex-row items-center gap-4 h-50 justify-between">
           <StudentsChart />
           <TeachersChart />
           <ClassesChart />
           <TestsChart />
         </div>
         {/* middle */}
-        <div className="flex items-center h-60 gap-4 justify-between">
-          <PayementsChart w={"w-1/2"} />
+        <div className="flex flex-col  xl:flex-row items-center min-h-80 gap-4 justify-between">
+          <PayementsChart w={"xl:w-1/2 w-full"} />
           <AttendanceChart />
         </div>
         {/* bottom */}
-        <div className="flex items-center gap-4 justify-between"></div>
       </div>
     </div>
   );

@@ -2,17 +2,17 @@ import React from "react";
 import StudentList from "../../../../Constants/Studetns.json";
 const TeacherStudents = (props) => {
   return (
-    <div className="text-white flex flex-col gap-2 overflow-scroll w-full p-6">
+    <div className="text-white flex flex-col gap-2 overflow-hidden w-full p-6">
       <header className="w-full p-1 text-center font-bold text-xl rounded-md">
         <h1>Student List</h1>
       </header>
 
-      <div className="w-full h-full flex flex-wrap gap-1 overflow-scroll">
+      <div className="w-full h-full flex flex-wrap gap-2 overflow-scroll pb-20">
         {StudentList.map((st, i) => {
           return st.ClassJourny.at(-1).teacher === props.logedInPerson.Id ? (
             <div
               key={i}
-              className="w-full h-max flex  p-4 gap-4 bg-gray-900 items-center rounded-md text-sm"
+              className="w-full h-max flex  p-4 gap-4 bg-white/4 items-center border border-pink-800 rounded-md text-sm"
             >
               <div className="xl:w-14 xl:h-14 w-10 h-10 rounded-full overflow-hidden shrink-0 border">
                 <img src={st.profileImage} alt="-" className="w-full h-full" />
