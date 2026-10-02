@@ -103,5 +103,75 @@
     "attendance": "-",
     "performance": "Excellent",
     "profileImage": "/Teachers/AminAhmadi.png"
+  },
+  {
+    "Id": "tch004",
+    "password": "maliha",
+    "Role": "teacher",
+    "firstName": "Maliha",
+    "lastName": "Ahmadi",
+    "gender": "Female",
+    "age": 0,
+    "email": "malihaAhmadi@gmail.com ",
+    "phone": "0000000000",
+    "department": "English",
+    "subject": "English",
+    "classes": [
+      {
+        "levelName": "_",
+        "round": "_",
+        "time": "_",
+        "classState": "Inprogress"
+      }
+    ],
+    "joiningDate": "-",
+    "employmentType": "-",
+    "salary": [
+      {
+        "round": "",
+        "salary": 0,
+        "salaryState": "paid"
+      }
+    ],
+    "state": "Active",
+    "emergencyContact": "-",
+    "attendance": "-",
+    "performance": "Excellent",
+    "profileImage": "_"
+  },
+  {
+    "Id": "tch005",
+    "password": "nasima",
+    "Role": "teacher",
+    "firstName": "Nasima",
+    "lastName": "Ahmadi",
+    "gender": "Female",
+    "age": 0,
+    "email": "NasimaAhmadi@gmail.com ",
+    "phone": "0000000000",
+    "department": "English",
+    "subject": "English",
+    "classes": [
+      {
+        "levelName": "_",
+        "round": "_",
+        "time": "_",
+        "classState": "Inprogress"
+      }
+    ],
+    "joiningDate": "-",
+    "employmentType": "-",
+    "salary": [
+      {
+        "round": "",
+        "salary": 0,
+        "salaryState": "paid"
+      }
+    ],
+    "state": "Active",
+    "emergencyContact": "-",
+    "attendance": "-",
+    "performance": "Excellent",
+    "profileImage": "_"
   }
 ]

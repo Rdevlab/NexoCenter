@@ -2,15 +2,29 @@
   {
     "reciever": "tch002",
     "sender": "admin",
-    "message": "Your class schedule has been updated. Please check the new timings.",
+    "message": "Welcome to the school management system! Your account has been created successfully.",
     "timestamp": "2024-06-15",
     "read": false
   },
   {
-    "reciever": "tch002",
+    "reciever": "tch003",
     "sender": "admin",
-    "message": "Your class schedule has been updated. Please check the new timings.",
-    "timestamp": "2024-06-16",
+    "message": "Welcome to the school management system! Your account has been created successfully.",
+    "timestamp": "2024-06-15",
+    "read": false
+  },
+  {
+    "reciever": "tch004",
+    "sender": "admin",
+    "message": "Welcome to the school management system! Your account has been created successfully.",
+    "timestamp": "2024-06-15",
+    "read": false
+  },
+  {
+    "reciever": "tch005",
+    "sender": "admin",
+    "message": "Welcome to the school management system! Your account has been created successfully.",
+    "timestamp": "2024-06-15",
     "read": false
   }
 ]
