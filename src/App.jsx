@@ -22,6 +22,7 @@ import TeacherAttendance from "./Components/main/Payments/Teachers/TeacherAttend
 import TeacherExams from "./Components/main/Payments/Teachers/TeacherExams";
 import TeacherReport from "./Components/main/Payments/Teachers/TeacherReport";
 import TeacherSetting from "./Components/main/Payments/Teachers/TeacherSettings";
+import Notifications from "./Components/main/Payments/Teachers/Notifications";
 
 const DashboardLayout = (props) => {
   return (
@@ -87,6 +88,10 @@ const TeacherDashboardLayout = (props) => {
         <Route
           path="Settings"
           element={<TeacherSetting logedInPerson={props.logedInPerson} />}
+        />
+        <Route
+          path="Dashboard/Notifications"
+          element={<Notifications logedInPerson={props.logedInPerson} />}
         />
       </Routes>
     </div>

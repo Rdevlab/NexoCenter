@@ -1,0 +1,16 @@
+[
+  {
+    "reciever": "tch002",
+    "sender": "admin",
+    "message": "Your class schedule has been updated. Please check the new timings.",
+    "timestamp": "2024-06-15",
+    "read": false
+  },
+  {
+    "reciever": "tch002",
+    "sender": "admin",
+    "message": "Your class schedule has been updated. Please check the new timings.",
+    "timestamp": "2024-06-16",
+    "read": false
+  }
+]

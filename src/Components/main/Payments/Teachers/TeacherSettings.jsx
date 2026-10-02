@@ -326,53 +326,6 @@ const TeacherSetting = (props) => {
           </div>
         </section>
 
-        {/* Classes */}
-        <section className="rounded-3xl border  border-white/10 p-4 shadow-sm sm:p-6">
-          <div className="mb-4 flex items-center gap-2">
-            <LuGraduationCap size={21} className="text-emerald-600" />
-
-            <h2 className="text-lg font-bold text-slate-800">
-              Assigned Classes
-            </h2>
-          </div>
-
-          <div className="flex flex-col gap-3">
-            {person.classes?.map((item, index) => (
-              <div
-                key={index}
-                className="rounded-2xl border border-slate-100 border  border-white/10 p-4"
-              >
-                <div className="flex items-start justify-between gap-3">
-                  <div>
-                    <h3 className="font-semibold capitalize text-slate-800">
-                      {item.levelName}
-                    </h3>
-
-                    <p className="mt-1 text-xs text-slate-400">
-                      Round {item.round}
-                    </p>
-                  </div>
-
-                  <span
-                    className={`rounded-full px-3 py-1 text-xs font-semibold ${
-                      item.classState === "Inprogress"
-                        ? "bg-emerald-100 text-emerald-700"
-                        : "bg-slate-100 text-slate-600"
-                    }`}
-                  >
-                    {item.classState}
-                  </span>
-                </div>
-
-                <div className="mt-4 flex items-center gap-2 text-sm text-slate-500">
-                  <LuClock size={16} />
-                  {item.time}
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
         {/* Employment & Salary */}
         <section className="rounded-3xl border  border-white/10 p-4 shadow-sm sm:p-6">
           <div className="mb-4 flex items-center gap-2">
