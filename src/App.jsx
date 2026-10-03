@@ -54,46 +54,48 @@ const DashboardLayout = (props) => {
 };
 const TeacherDashboardLayout = (props) => {
   return (
-    <div className="w-screen h-screen flex gap-2 bg-[var(--color)]">
+    <div className="flex h-dvh min-h-0 w-screen flex-col-reverse gap-2 overflow-hidden bg-[var(--color)] xl:flex-row">
       <TeacherSidebar />
-      <Routes>
-        <Route
-          index
-          element={<TeacherDashboard logedInPerson={props.logedInPerson} />}
-        />
-        <Route
-          path="Dashboard"
-          element={<TeacherDashboard logedInPerson={props.logedInPerson} />}
-        />
-        <Route
-          path="Students"
-          element={<TeacherStudents logedInPerson={props.logedInPerson} />}
-        />
-        <Route
-          path="Classes"
-          element={<TeacherClasses logedInPerson={props.logedInPerson} />}
-        />
-        <Route
-          path="Attendance"
-          element={<TeacherAttendance logedInPerson={props.logedInPerson} />}
-        />
-        <Route
-          path="Exams"
-          element={<TeacherExams logedInPerson={props.logedInPerson} />}
-        />
-        <Route
-          path="Reports"
-          element={<TeacherReport logedInPerson={props.logedInPerson} />}
-        />
-        <Route
-          path="Settings"
-          element={<TeacherSetting logedInPerson={props.logedInPerson} />}
-        />
-        <Route
-          path="Dashboard/Notifications"
-          element={<Notifications logedInPerson={props.logedInPerson} />}
-        />
-      </Routes>
+      <main className="min-h-0 min-w-0 flex-1 overflow-y-auto xl:overflow-hidden">
+        <Routes>
+          <Route
+            index
+            element={<TeacherDashboard logedInPerson={props.logedInPerson} />}
+          />
+          <Route
+            path="Dashboard"
+            element={<TeacherDashboard logedInPerson={props.logedInPerson} />}
+          />
+          <Route
+            path="Students"
+            element={<TeacherStudents logedInPerson={props.logedInPerson} />}
+          />
+          <Route
+            path="Classes"
+            element={<TeacherClasses logedInPerson={props.logedInPerson} />}
+          />
+          <Route
+            path="Attendance"
+            element={<TeacherAttendance logedInPerson={props.logedInPerson} />}
+          />
+          <Route
+            path="Exams"
+            element={<TeacherExams logedInPerson={props.logedInPerson} />}
+          />
+          <Route
+            path="Reports"
+            element={<TeacherReport logedInPerson={props.logedInPerson} />}
+          />
+          <Route
+            path="Settings"
+            element={<TeacherSetting logedInPerson={props.logedInPerson} />}
+          />
+          <Route
+            path="Dashboard/Notifications"
+            element={<Notifications logedInPerson={props.logedInPerson} />}
+          />
+        </Routes>
+      </main>
     </div>
   );
 };

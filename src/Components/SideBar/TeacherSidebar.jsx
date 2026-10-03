@@ -42,7 +42,7 @@ const sidelinks = [
 const TeacherSidebar = () => {
   const [showFull, setShowFull] = useState(false);
   return (
-    <div className="flex xl:border-r border-white/10 justify-center justify-start xl:relative absolute backdrop-blur-xl h-max xl:h-full w-full xl:w-max bottom-0 z-10 border-t border-white/10 bg-gradient-to-b from-slate-900/95 to-[#0b011d]/95 shadow-[0_-12px_40px_rgba(0,0,0,0.3)] xl:bg-transparent xl:shadow-none">
+    <div className="relative z-10 flex h-max w-full justify-start border-t border-white/10 bg-gradient-to-b from-slate-900/95 to-[#0b011d]/95 shadow-[0_-12px_40px_rgba(0,0,0,0.3)] backdrop-blur-xl xl:h-full xl:w-max xl:border-r xl:border-t-0 xl:bg-transparent xl:shadow-none">
       {/* nav main content side */}
       <div
         className={`flex w-full items-stretch justify-around gap-1 overflow-hidden p-2 text-xs duration-500 xl:h-max xl:w-auto xl:flex-col xl:items-center xl:justify-center xl:gap-6 xl:p-4 xl:py-6 xl:text-sm ${showFull ? "xl:w-34" : "xl:w-14"}`}

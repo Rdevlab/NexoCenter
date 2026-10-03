@@ -31,7 +31,7 @@ const TeacherDashboard = ({ logedInPerson = {} }) => {
     : 0;
 
   return (
-    <div className="flex h-screen w-full min-w-0 flex-col gap-5 overflow-y-auto bg-[var(--color)] p-4 pb-24 text-white sm:p-6 xl:p-8">
+    <div className="flex min-h-full w-full min-w-0 flex-col gap-5 bg-[var(--color)] p-4 pb-24 text-white sm:p-6 xl:h-full xl:overflow-y-auto xl:p-8">
       <header className="w-full">
         <div className="relative flex min-h-60 w-full items-center overflow-hidden rounded-3xl border border-white/10 bg-slate-900 bg-[url('https://img.magnific.com/free-vector/technology-banner-background-with-hexagonal-shapes-text-space_1017-22589.jpg?semt=ais_hybrid&w=740&q=80')] bg-cover bg-center p-4 pt-16 shadow-xl shadow-black/20 sm:p-6 sm:pt-16">
           <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-950/80 to-slate-900/55" />

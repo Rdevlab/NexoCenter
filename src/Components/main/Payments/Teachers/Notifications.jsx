@@ -1,5 +1,7 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import notificationsData from "../../../../Constants/Notifications.json";
+import { Link } from "react-router-dom";
+import { LuBell, LuChevronLeft, LuSettings2 } from "react-icons/lu";
 
 const getNotificationKey = (notification) =>
   `${notification.reciever}:${notification.timestamp}:${notification.sender}:${notification.message}`;
@@ -108,7 +110,20 @@ const Notifications = (props) => {
   ).length;
 
   return (
-    <div className="text-white w-full h-full overflow-hidden flex flex-col gap-2 p-4">
+    <div className="text-white w-full h-full overflow-hidden flex flex-col gap-2 p-4 pb-20">
+      <div className=" left-4 right-4 top-4 z-20 flex items-center justify-between sm:left-6 sm:right-6">
+        <Link
+          to={""}
+          aria-label="Back to login"
+          title="Back to login"
+          className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-slate-950/40 text-white shadow-lg backdrop-blur-md transition hover:border-white/30 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300"
+        >
+          <LuChevronLeft size={20} />
+        </Link>
+        <h1 className="font-semibold text-lg px-4 text-slate-600">
+          Recent Notifications
+        </h1>
+      </div>
       {/* todays date */}
       <div className="w-full flex items-center justify-between gap-4 rounded-3xl border border-white/10 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-950 p-5 shadow-lg shadow-black/20 sm:p-6">
         <div className="flex items-center gap-4">

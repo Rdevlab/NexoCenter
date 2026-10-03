@@ -63,7 +63,7 @@ const TeacherSetting = (props) => {
   const person = props.logedInPerson;
 
   return (
-    <div className="h-screen w-full overflow-scroll pb-20 bg-[var(--color)] p-3 sm:p-5">
+    <div className="min-h-full w-full bg-[var(--color)] p-3 pb-20 sm:p-5 xl:h-full xl:overflow-y-auto">
       <div className="mx-auto w-full max-w-5xl space-y-4">
         {/* Profile Header */}
         <section className="overflow-hidden rounded-3xl  shadow-md border border-white/8">
