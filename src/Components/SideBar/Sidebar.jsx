@@ -36,11 +36,7 @@ const sidelinks = [
     path: "/Admin/Classes & Courses",
     Icons: LuBookOpen,
   },
-  {
-    title: "Attendance",
-    path: "/Admin/Attendance",
-    Icons: LuClipboardCheck,
-  },
+
   {
     title: "Exams & Grades",
     path: "/Admin/Exams & Grades",
@@ -66,11 +62,7 @@ const sidelinks = [
     path: "/Admin/Reports",
     Icons: BsFileBarGraph,
   },
-  {
-    title: "Admin & Users",
-    path: "/Admin/Admin & Users",
-    Icons: LuUsers,
-  },
+
   {
     title: "Settings",
     path: "/Admin/Settings",

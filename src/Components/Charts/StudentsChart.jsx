@@ -1,82 +1,107 @@
 import React from "react";
-import {
-  AreaChart,
-  Area,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  ResponsiveContainer,
-} from "recharts";
-const data = [
-  { month: "A", students: 0 },
-  { month: "B", students: 0 },
-  { month: "C", students: 0 },
-  { month: "D", students: 0 },
-  { month: "E", students: 0 },
-  { month: "F", students: 0 },
+import { Cell, Pie, PieChart, ResponsiveContainer, Tooltip } from "recharts";
+import StudentList from "../../Constants/Studetns.json";
+
+const feeCounts = StudentList.reduce(
+  (counts, student) => {
+    const currentJourney = student.ClassJourny?.at(-1);
+    if (currentJourney?.feeState?.toLowerCase() === "paid") {
+      counts.paid += 1;
+    } else {
+      counts.pending += 1;
+    }
+    return counts;
+  },
+  { paid: 0, pending: 0 },
+);
+
+const feeData = [
+  { name: "Paid", value: feeCounts.paid, color: "#34d399" },
+  { name: "Pending", value: feeCounts.pending, color: "#fbbf24" },
 ];
+const paidPercentage = StudentList.length
+  ? Math.round((feeCounts.paid / StudentList.length) * 100)
+  : 0;
 
 const StudentsChart = () => {
   return (
-    <div className="w-full h-full rounded-2xl duration-500">
-      <div className="mb-4">
-        <h2 className="text-lg font-semibold">Students</h2>
+    <section className="flex h-full min-h-[17rem] w-full min-w-0 flex-col rounded-lg border border-white/10 bg-gray-800/70 p-4 text-white sm:p-5">
+      <div className="mb-2 flex items-start justify-between gap-3">
+        <div>
+          <h2 className="text-base font-semibold text-white">
+            Student overview
+          </h2>
+          <p className="mt-1 text-xs text-white/45">Current fee status</p>
+        </div>
+        <span className="shrink-0 rounded-md border border-white/10 bg-white/[0.04] px-2 py-1 text-xs text-white/60">
+          {StudentList.length} students
+        </span>
       </div>
 
-      <ResponsiveContainer width="100%" height="90%">
-        <AreaChart data={data}>
-          <defs>
-            <linearGradient id="pinkGradient" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="#ec4899" stopOpacity={0.35} />
-              <stop offset="100%" stopColor="#ec4899" stopOpacity={0} />
-            </linearGradient>
+      <div className="relative min-h-0 flex-1">
+        {StudentList.length > 0 ? (
+          <>
+            <ResponsiveContainer width="100%" height="100%">
+              <PieChart>
+                <Pie
+                  data={feeData}
+                  dataKey="value"
+                  nameKey="name"
+                  cx="50%"
+                  cy="50%"
+                  innerRadius="62%"
+                  outerRadius="82%"
+                  paddingAngle={3}
+                  stroke="none"
+                >
+                  {feeData.map((entry) => (
+                    <Cell key={entry.name} fill={entry.color} />
+                  ))}
+                </Pie>
+                <Tooltip
+                  formatter={(value, name) => [`${value} students`, name]}
+                  contentStyle={{
+                    border: "1px solid rgba(255,255,255,0.12)",
+                    borderRadius: "8px",
+                    backgroundColor: "#111827",
+                    color: "#f8fafc",
+                    fontSize: "12px",
+                  }}
+                  itemStyle={{ color: "#d1fae5" }}
+                />
+              </PieChart>
+            </ResponsiveContainer>
+            <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center">
+              <span className="text-2xl font-semibold text-white">
+                {paidPercentage}%
+              </span>
+              <span className="mt-1 text-[10px] uppercase tracking-wide text-white/45">
+                fees paid
+              </span>
+            </div>
+          </>
+        ) : (
+          <div className="flex h-full items-center justify-center text-sm text-white/45">
+            No student records available
+          </div>
+        )}
+      </div>
 
-            <linearGradient id="greenGradient" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="#22c55e" stopOpacity={0.35} />
-              <stop offset="100%" stopColor="#22c55e" stopOpacity={0} />
-            </linearGradient>
-          </defs>
-
-          <CartesianGrid
-            strokeDasharray="3 3"
-            vertical={false}
-            stroke="#e2e8f0"
-          />
-
-          <XAxis
-            dataKey="month"
-            axisLine={false}
-            tickLine={false}
-            tick={{ fill: "#94a3b8", fontSize: 12 }}
-          />
-
-          <YAxis
-            axisLine={false}
-            tickLine={false}
-            tick={{ fill: "#94a3b8", fontSize: 12 }}
-          />
-
-          <Tooltip
-            contentStyle={{
-              border: "none",
-              borderRadius: "12px",
-              boxShadow: "0 5px 20px rgba(209, 27, 27, 0.08)",
-              backgroundColor: "rgba(1, 0, 3, 0.77)",
-              color: "gray",
-            }}
-          />
-
-          <Area
-            type="monotone"
-            dataKey="students"
-            stroke="#af2525"
-            strokeWidth={3}
-            fill="url(#pinkGradient)"
-          />
-        </AreaChart>
-      </ResponsiveContainer>
-    </div>
+      <div className="mt-2 grid grid-cols-2 gap-3 border-t border-white/[0.07] pt-3">
+        {feeData.map((entry) => (
+          <div key={entry.name} className="flex items-center gap-2">
+            <span
+              className="h-2 w-2 shrink-0 rounded-full"
+              style={{ backgroundColor: entry.color }}
+            />
+            <span className="text-xs text-white/50">{entry.name}</span>
+            <span className="ml-auto text-sm font-medium text-white/85">
+              {entry.value}
+            </span>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 };
 

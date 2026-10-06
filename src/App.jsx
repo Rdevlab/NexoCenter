@@ -5,14 +5,12 @@ import Dashboard from "./Components/main/Dashboard";
 import Students from "./Components/main/Students";
 import Teachers from "./Components/main/Teachers";
 import Classes from "./Components/main/Classes";
-import Attendance from "./Components/main/Attendance";
 import ExamsGrades from "./Components/main/ExamsGrades";
 import Payments from "./Components/main/Payments";
 import Communication from "./Components/main/Communication";
 import Schdule from "./Components/main/Schdule";
 import Reports from "./Components/main/Reports";
 import Setting from "./Components/main/Setting";
-import Users from "./Components/main/Users";
 import LoginForm from "./Components/main/LoginForm";
 import TeacherDashboard from "./Components/main/Payments/Teachers/TeacherDashboard";
 import TeacherSidebar from "./Components/SideBar/TeacherSidebar";
@@ -40,14 +38,12 @@ const DashboardLayout = (props) => {
         <Route path="Students" element={<Students />} />
         <Route path="Teachers" element={<Teachers />} />
         <Route path="Classes & Courses" element={<Classes />} />
-        <Route path="Attendance" element={<Attendance />} />
         <Route path="Exams & Grades" element={<ExamsGrades />} />
         <Route path="Payments & Fees" element={<Payments />} />
         <Route path="Communication" element={<Communication />} />
         <Route path="Schedule" element={<Schdule />} />
         <Route path="Reports" element={<Reports />} />
         <Route path="Settings" element={<Setting />} />
-        <Route path="Admin & Users" element={<Users />} />
       </Routes>
     </div>
   );

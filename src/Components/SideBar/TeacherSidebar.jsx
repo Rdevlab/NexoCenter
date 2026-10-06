@@ -42,47 +42,61 @@ const sidelinks = [
 const TeacherSidebar = () => {
   const [showFull, setShowFull] = useState(false);
   return (
-    <div className="relative z-10 flex h-max w-full justify-start border-t border-white/10 bg-gradient-to-b from-slate-900/95 to-[#0b011d]/95 shadow-[0_-12px_40px_rgba(0,0,0,0.3)] backdrop-blur-xl xl:h-full xl:w-max xl:border-r xl:border-t-0 xl:bg-transparent xl:shadow-none">
-      {/* nav main content side */}
-      <div
-        className={`flex w-full items-stretch justify-around gap-1 overflow-hidden p-2 text-xs duration-500 xl:h-max xl:w-auto xl:flex-col xl:items-center xl:justify-center xl:gap-6 xl:p-4 xl:py-6 xl:text-sm ${showFull ? "xl:w-34" : "xl:w-14"}`}
+    <aside className="relative z-30 w-full shrink-0 border-t border-white/10 bg-gray-950/95 shadow-[0_-10px_30px_rgba(0,0,0,0.22)] backdrop-blur-xl xl:h-full xl:w-auto xl:border-r xl:border-t-0 xl:shadow-none">
+      <nav
+        aria-label="Teacher navigation"
+        className={`flex w-full justify-start gap-1 overflow-x-auto p-2.5 text-xs [scrollbar-width:none] [&::-webkit-scrollbar]:hidden xl:h-full xl:flex-col xl:justify-start xl:gap-2 xl:overflow-x-hidden xl:overflow-y-auto xl:p-3 ${showFull ? "xl:w-60" : "xl:w-[4.5rem]"}`}
       >
-        {sidelinks.map((item, i) => {
-          return (
-            <NavLink
-              className={({ isActive }) => {
-                return `group flex min-w-0 flex-1 flex-col items-center justify-center gap-1.5 rounded-2xl px-1.5 py-2 text-[10px] font-medium tracking-wide transition-all duration-200 active:scale-95 xl:flex-none xl:flex-row xl:gap-2 xl:rounded-full xl:px-0 xl:py-0 xl:text-sm xl:tracking-normal ${
-                  isActive
-                    ? "bg-emerald-400/10 text-emerald-300 ring-1 ring-emerald-300/20 xl:bg-transparent xl:text-[var(--green)] xl:ring-0"
-                    : "text-slate-400 hover:bg-white/[0.06] hover:text-white xl:text-white xl:hover:bg-transparent"
-                }`;
-              }}
-              key={i}
-              to={item.path}
+        <div
+          className={`hidden h-12 shrink-0 items-center gap-3 border-b border-white/10 px-2 pb-3 xl:flex ${showFull ? "justify-start" : "justify-center"}`}
+        >
+          <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-emerald-300/10 text-emerald-300">
+            <LuGraduationCap className="h-5 w-5" />
+          </span>
+          {showFull && (
+            <span className="min-w-0 truncate text-sm font-semibold text-white">
+              Faculty portal
+            </span>
+          )}
+        </div>
+        {sidelinks.map((item) => (
+          <NavLink
+            className={({ isActive }) =>
+              `group flex h-14 w-[4.25rem] shrink-0 flex-col items-center justify-center gap-1 rounded-lg text-[10px] font-medium transition-colors xl:h-11 xl:w-full xl:flex-row xl:justify-start xl:gap-3 xl:px-3 xl:text-sm ${
+                isActive
+                  ? "bg-emerald-300/10 text-emerald-200 ring-1 ring-inset ring-emerald-300/20"
+                  : "text-white/55 hover:bg-white/[0.06] hover:text-white"
+              } ${showFull ? "xl:justify-start" : "xl:justify-center xl:px-0"}`
+            }
+            key={item.path}
+            to={item.path}
+            title={!showFull ? item.title : undefined}
+          >
+            <item.Icons className="h-[18px] w-[18px] shrink-0 transition-transform group-hover:scale-105" />
+            <span
+              className={`max-w-full truncate leading-none ${showFull ? "xl:block" : "xl:sr-only"}`}
             >
-              <item.Icons className="h-5 w-5 shrink-0 transition-transform duration-200 group-hover:scale-110 xl:h-3.5 xl:w-3.5 xl:group-hover:scale-100" />
-              <span
-                className={`${showFull ? "flex xl:animate-[sidelinkappear_.5s_.4s_ease_forwards]" : "xl:animate-[sidelinkdisappear_.4s_ease_forwards]"} flex whitespace-nowrap leading-none duration-300 xl:opacity-0`}
-              >
-                {item.title}
-              </span>
-            </NavLink>
-          );
-        })}
-      </div>
-      {/* nav content toggler button */}
+              {item.title}
+            </span>
+          </NavLink>
+        ))}
+      </nav>
       <button
-        className="hidden xl:flex py-4 bg-white/10 w-max h-max rounded-r-xl -right-5 top-12 cursor-pointer absolute hover:bg-white/20 duration-500"
-        onClick={() => {
-          showFull ? setShowFull(false) : setShowFull(true);
-        }}
+        type="button"
+        aria-label={
+          showFull ? "Collapse teacher navigation" : "Expand teacher navigation"
+        }
+        aria-expanded={showFull}
+        className="absolute -top-3 right-3 z-40 hidden h-7 w-7 items-center justify-center rounded-full border border-white/10 bg-gray-800 text-white/70 shadow-md transition-colors hover:bg-gray-700 hover:text-white xl:flex xl:-right-3 xl:top-5"
+        onClick={() => setShowFull((isExpanded) => !isExpanded)}
       >
         <BiChevronRight
-          size={20}
-          className={`${showFull ? "rotate-180" : "rotate-0"} duration-500 text-white/50`}
+          aria-hidden="true"
+          size={16}
+          className={`transition-transform duration-300 ${showFull ? "rotate-180" : "rotate-0"}`}
         />
       </button>
-    </div>
+    </aside>
   );
 };
 

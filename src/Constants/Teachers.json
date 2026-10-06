@@ -9,17 +9,47 @@
     "age": 22,
     "email": "rohullahahmadi531@gmail.com",
     "phone": "+93 76 4564 241",
-    "department": "English",
-    "subject": "Eng and Computer",
+    "department": "Management",
+    "subject": "English and Computer",
     "classes": [
       {
-        "levelName": "let's go one",
+        "levelName": "Junior Two",
         "round": "A",
-        "time": "2:00 - 3:00",
+        "time": "1:30 - 2:30",
         "classState": "Inprogress"
+      },
+      {
+        "levelName": "Junior One",
+        "round": "A",
+        "time": "2:30 - 3:30",
+        "classState": "Inprogress"
+      },
+      {
+        "levelName": "Junior Three",
+        "round": "A",
+        "time": "3:30 - 4:30",
+        "classState": "upcoming"
+      },
+      {
+        "levelName": "Computer",
+        "round": "A",
+        "time": "4:30 - 5:30",
+        "classState": "upcoming"
+      },
+      {
+        "levelName": "Web Design (Online)",
+        "round": "A",
+        "time": "7:00 - 8:00",
+        "classState": "upcoming"
+      },
+      {
+        "levelName": "React (Online)",
+        "round": "A",
+        "time": "8:30 - 9:30",
+        "classState": "upcoming"
       }
     ],
-    "joiningDate": "2015-03-12",
+    "joiningDate": "2026-01-01",
     "employmentType": "Full Time",
     "salary": [
       {
@@ -41,21 +71,33 @@
     "firstName": "Attiqullah",
     "lastName": "Mahmodi",
     "gender": "Male",
-    "age": 0,
+    "age": 28,
     "email": "attiqulla@gmail.com",
-    "phone": "-",
-    "department": "-",
-    "subject": "-",
+    "phone": "+93 77 648 6538",
+    "department": "Science",
+    "subject": "Math English",
     "classes": [
       {
-        "levelName": "let's go one",
+        "levelName": "Let's go Two",
         "round": "A",
-        "time": "2:00 - 3:00",
-        "classState": "Inprogress"
+        "time": "1:30 - 2:30",
+        "classState": "upcoming"
+      },
+      {
+        "levelName": " ( حساب و الجبر) ریاضیات",
+        "round": "A",
+        "time": "1:30 - 2:30",
+        "classState": "upcoming"
+      },
+      {
+        "levelName": " (چهارم الی ششم) صنف تقویتی ",
+        "round": "A",
+        "time": "4:30 - 5:30",
+        "classState": "upcoming"
       }
     ],
-    "joiningDate": "-",
-    "employmentType": "-",
+    "joiningDate": "2026/10/01",
+    "employmentType": "Part Time",
     "salary": [
       {
         "round": "",
@@ -64,8 +106,8 @@
       }
     ],
     "state": "Active",
-    "emergencyContact": "-",
-    "attendance": "-",
+    "emergencyContact": "+93 77 648 6538",
+    "attendance": "100%",
     "performance": "Excellent",
     "profileImage": "/Teachers/RohullahAhmadi.png"
   },
@@ -76,21 +118,33 @@
     "firstName": "Amin",
     "lastName": "Ahmadi",
     "gender": "Male",
-    "age": 0,
+    "age": 22,
     "email": "-",
-    "phone": "-",
-    "department": "-",
-    "subject": "-",
+    "phone": "+93 70 511 8274",
+    "department": "religion",
+    "subject": "تجوید و احکام",
     "classes": [
       {
-        "levelName": "let's go one",
+        "levelName": "Let's go One",
         "round": "A",
-        "time": "2:00 - 3:00",
-        "classState": "Inprogress"
+        "time": "1:30 - 2:30",
+        "classState": "upcoming"
+      },
+      {
+        "levelName": "تجوید و احکام",
+        "round": "A",
+        "time": "2:30 - 3:30",
+        "classState": "upcoming"
+      },
+      {
+        "levelName": "تجوید و احکام",
+        "round": "A",
+        "time": "4:30 - 5:30",
+        "classState": "upcoming"
       }
     ],
-    "joiningDate": "-",
-    "employmentType": "-",
+    "joiningDate": "2026/10/01",
+    "employmentType": "Part Time",
     "salary": [
       {
         "round": "",
@@ -99,8 +153,8 @@
       }
     ],
     "state": "Active",
-    "emergencyContact": "-",
-    "attendance": "-",
+    "emergencyContact": "+93 70 511 8274",
+    "attendance": "100%",
     "performance": "Excellent",
     "profileImage": "/Teachers/AminAhmadi.png"
   },
@@ -111,9 +165,9 @@
     "firstName": "Maliha",
     "lastName": "Ahmadi",
     "gender": "Female",
-    "age": 0,
+    "age": 18,
     "email": "malihaAhmadi@gmail.com ",
-    "phone": "0000000000",
+    "phone": "+93 76 649 4019",
     "department": "English",
     "subject": "English",
     "classes": [
@@ -124,8 +178,8 @@
         "classState": "Inprogress"
       }
     ],
-    "joiningDate": "-",
-    "employmentType": "-",
+    "joiningDate": "2027/01/01",
+    "employmentType": "Part Time",
     "salary": [
       {
         "round": "",
@@ -134,8 +188,8 @@
       }
     ],
     "state": "Active",
-    "emergencyContact": "-",
-    "attendance": "-",
+    "emergencyContact": "+93 76 649 4019",
+    "attendance": "100%",
     "performance": "Excellent",
     "profileImage": "_"
   },
@@ -146,9 +200,9 @@
     "firstName": "Nasima",
     "lastName": "Ahmadi",
     "gender": "Female",
-    "age": 0,
+    "age": 16,
     "email": "NasimaAhmadi@gmail.com ",
-    "phone": "0000000000",
+    "phone": "+93 70 342 7908",
     "department": "English",
     "subject": "English",
     "classes": [
@@ -159,8 +213,8 @@
         "classState": "Inprogress"
       }
     ],
-    "joiningDate": "-",
-    "employmentType": "-",
+    "joiningDate": "2027/01/01",
+    "employmentType": "Part Time",
     "salary": [
       {
         "round": "",
@@ -169,8 +223,8 @@
       }
     ],
     "state": "Active",
-    "emergencyContact": "-",
-    "attendance": "-",
+    "emergencyContact": "+93 70 342 7908",
+    "attendance": "100%",
     "performance": "Excellent",
     "profileImage": "_"
   }

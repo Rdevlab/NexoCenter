@@ -103,7 +103,10 @@ const Notifications = (props) => {
     today,
   );
   const notifications = userNotifications
-    .filter((notification) => notification.reciever === person?.Id)
+    .filter(
+      (notification) =>
+        notification.reciever === person?.Id || notification.reciever === "all",
+    )
     .sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
   const unreadCount = notifications.filter(
     (notification) => !notification.read,

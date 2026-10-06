@@ -1,30 +1,16 @@
 [
   {
-    "reciever": "tch002",
+    "reciever": "all",
     "sender": "admin",
-    "message": "Welcome to the school management system! Your account has been created successfully.",
-    "timestamp": "2024-06-15",
+    "message": "لیست صنف ها مطابق تقسیم اوقات برای شما تنظیم شده است",
+    "timestamp": "2026-10-03",
     "read": false
   },
   {
-    "reciever": "tch003",
+    "reciever": "all",
     "sender": "admin",
     "message": "Welcome to the school management system! Your account has been created successfully.",
-    "timestamp": "2024-06-15",
-    "read": false
-  },
-  {
-    "reciever": "tch004",
-    "sender": "admin",
-    "message": "Welcome to the school management system! Your account has been created successfully.",
-    "timestamp": "2024-06-15",
-    "read": false
-  },
-  {
-    "reciever": "tch005",
-    "sender": "admin",
-    "message": "Welcome to the school management system! Your account has been created successfully.",
-    "timestamp": "2024-06-15",
+    "timestamp": "2026-10-01",
     "read": false
   }
 ]

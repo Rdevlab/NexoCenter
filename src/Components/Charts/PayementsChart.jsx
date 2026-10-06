@@ -7,118 +7,150 @@ import {
   CartesianGrid,
   Tooltip,
   ResponsiveContainer,
-  Cell,
+  Legend,
 } from "recharts";
-const classData = [
-  { month: "Month 1", income: 28 },
-  { month: "Month 2", income: 35 },
-  { month: "Month 3", income: 30 },
-  { month: "Month 4", income: 42 },
-  { month: "Month 5", income: 38 },
-  { month: "Month 6", income: 45 },
-  { month: "Month 7", income: 45 },
-  { month: "Month 8", income: 45 },
-  { month: "Month 9", income: 45 },
-  { month: "Month 10", income: 45 },
-  { month: "Month 11", income: 45 },
-  { month: "Month 12", income: 45 },
-];
-const colors = [
-  "#0a0b44",
-  "#080dff",
-  "#e40b00",
-  "#ec4899",
-  "#22c55e",
-  "#03a7f9",
-];
-const CustomShapeBar = (props) => {
-  const { x, y, width, height, fill } = props;
+import StudentList from "../../Constants/Studetns.json";
 
-  return (
-    <path
-      d={`
-        M ${x + 10},${y}
-        L ${x + width - 10},${y}
-        Q ${x + width},${y} ${x + width},${y + 10}
-        L ${x + width},${y + height}
-        L ${x},${y + height}
-        L ${x},${y + 10}
-        Q ${x},${y} ${x + 10},${y}
-        Z
-      `}
-      fill={fill}
-    />
-  );
-};
+const formatAmount = (amount) =>
+  `${new Intl.NumberFormat("en-US", { maximumFractionDigits: 0 }).format(amount)} Afs`;
+
+const roundTotals = new Map();
+StudentList.forEach((student) => {
+  (student.ClassJourny ?? []).forEach((journey) => {
+    const round = journey.round?.trim() || "Unassigned";
+    const totals = roundTotals.get(round) ?? {
+      billed: 0,
+      collected: 0,
+      outstanding: 0,
+    };
+    const amount = Number(journey.fee) || 0;
+    totals.billed += amount;
+    if (journey.feeState?.toLowerCase() === "paid") {
+      totals.collected += amount;
+    } else {
+      totals.outstanding += amount;
+    }
+    roundTotals.set(round, totals);
+  });
+});
+
+const paymentData = [...roundTotals]
+  .map(([round, totals]) => ({ round, ...totals }))
+  .sort((first, second) => first.round.localeCompare(second.round));
+const totalCollected = paymentData.reduce(
+  (total, round) => total + round.collected,
+  0,
+);
+const totalOutstanding = paymentData.reduce(
+  (total, round) => total + round.outstanding,
+  0,
+);
 
 const PayementsChart = (props) => {
   return (
-    <div className={`${props.w} h-full rounded-2xl shrink-0 duration-500`}>
-      {/* Header */}
-      <div className="mb-5">
-        <h2 className="text-lg font-semibold">Payments overview</h2>
+    <section
+      className={`${props.w} flex h-full min-h-[18rem] min-w-0 shrink-0 flex-col rounded-lg border border-white/10 bg-gray-800/70 p-4 text-white duration-300`}
+    >
+      <div className="mb-3 flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+        <div>
+          <h2 className="text-base font-semibold text-white">
+            Payments overview
+          </h2>
+          <p className="mt-1 text-xs text-white/45">
+            Student fee collection by round
+          </p>
+        </div>
+        <div className="flex flex-wrap gap-2 text-xs">
+          <span className="rounded-md border border-emerald-300/15 bg-emerald-300/[0.06] px-2.5 py-1.5 text-emerald-200">
+            Collected {formatAmount(totalCollected)}
+          </span>
+          <span className="rounded-md border border-amber-300/15 bg-amber-300/[0.06] px-2.5 py-1.5 text-amber-100">
+            Due {formatAmount(totalOutstanding)}
+          </span>
+        </div>
       </div>
 
-      {/* Chart */}
-      <div className="h-full">
-        <ResponsiveContainer width="100%" height="100%">
-          <BarChart
-            data={classData}
-            margin={{
-              top: 10,
-              right: 10,
-              left: -20,
-              bottom: 5,
-            }}
-          >
-            <CartesianGrid
-              vertical={false}
-              strokeDasharray="3 3"
-              stroke="#9fa6af"
-            />
-
-            <XAxis
-              dataKey="month"
-              axisLine={false}
-              tickLine={false}
-              tick={{
-                fill: "#94a3b8",
-                fontSize: 11,
-              }}
-            />
-
-            <YAxis
-              axisLine={false}
-              tickLine={false}
-              tick={{
-                fill: "#94a3b8",
-                fontSize: 11,
-              }}
-            />
-
-            <Tooltip
-              cursor={{ fill: "#f8fafc00" }}
-              contentStyle={{
-                border: "none",
-                borderRadius: "12px",
-                backgroundColor: "green",
-                boxShadow: "0 5px 20px rgba(0,0,0,0.08)",
-              }}
-              formatter={(value) => [`${value} Afs`, "Income"]}
-            />
-
-            <Bar dataKey="income" barSize={35} shape={<CustomShapeBar />}>
-              {classData.map((entry, index) => (
-                <Cell
-                  key={`cell-${index}`}
-                  fill={colors[index % colors.length]}
-                />
-              ))}
-            </Bar>
-          </BarChart>
-        </ResponsiveContainer>
+      <div className="min-h-0 flex-1">
+        {paymentData.length ? (
+          <ResponsiveContainer width="100%" height="100%">
+            <BarChart
+              data={paymentData}
+              layout="vertical"
+              margin={{ top: 4, right: 18, bottom: 0, left: 0 }}
+              barCategoryGap="34%"
+            >
+              <CartesianGrid
+                vertical
+                horizontal={false}
+                stroke="rgba(255,255,255,0.08)"
+              />
+              <XAxis
+                type="number"
+                tickFormatter={(value) =>
+                  new Intl.NumberFormat("en", { notation: "compact" }).format(
+                    value,
+                  )
+                }
+                axisLine={false}
+                tickLine={false}
+                tick={{ fill: "#a1a1aa", fontSize: 10 }}
+              />
+              <YAxis
+                type="category"
+                dataKey="round"
+                width={78}
+                axisLine={false}
+                tickLine={false}
+                tick={{ fill: "#cbd5e1", fontSize: 11 }}
+              />
+              <Tooltip
+                cursor={{ fill: "rgba(255,255,255,0.035)" }}
+                formatter={(value, name) => [formatAmount(value), name]}
+                contentStyle={{
+                  border: "1px solid rgba(255,255,255,0.12)",
+                  borderRadius: "8px",
+                  backgroundColor: "#111827",
+                  color: "#f8fafc",
+                  fontSize: "12px",
+                }}
+                itemStyle={{ color: "#a7f3d0" }}
+                labelStyle={{ color: "#cbd5e1", marginBottom: "4px" }}
+              />
+              <Legend
+                verticalAlign="top"
+                align="right"
+                height={26}
+                iconType="circle"
+                iconSize={7}
+                wrapperStyle={{ color: "#a1a1aa", fontSize: "10px" }}
+              />
+              <Bar
+                dataKey="collected"
+                name="Collected"
+                fill="#34d399"
+                radius={[0, 5, 5, 0]}
+                maxBarSize={18}
+              />
+              <Bar
+                dataKey="outstanding"
+                name="Outstanding"
+                fill="#fbbf24"
+                radius={[0, 5, 5, 0]}
+                maxBarSize={18}
+              />
+            </BarChart>
+          </ResponsiveContainer>
+        ) : (
+          <div className="flex h-full items-center justify-center text-sm text-white/45">
+            No student fee records available
+          </div>
+        )}
       </div>
-    </div>
+      <p className="mt-2 text-[10px] text-white/35">
+        {paymentData.length} fee {paymentData.length === 1 ? "round" : "rounds"}{" "}
+        · {formatAmount(totalCollected + totalOutstanding)} billed
+      </p>
+    </section>
   );
 };
 

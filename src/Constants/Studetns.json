@@ -1,9 +1,9 @@
 [
   {
     "Id": "stu001",
-    "name": "Ali",
-    "fathername": "Mohmad",
-    "lastname": "Ahmadi",
+    "name": "Mahdi",
+    "fathername": "Sarwar",
+    "lastname": "_",
     "phone": "-",
     "email": "-",
     "joinDate": "_",
@@ -12,14 +12,302 @@
     "ClassJourny": [
       {
         "round": "A",
-        "teacher": "tch002",
-        "ClassName": "let's go one",
-        "time": "2:00 - 3:00",
+        "teacher": "tch001",
+        "ClassName": "junior one",
+        "time": "1:30 - 2:30",
+        "middleTestScore": 0,
+        "finalTestScore": 0,
+        "fee": 100,
+        "billNumber": "_",
+        "feeState": "not paid"
+      }
+    ]
+  },
+  {
+    "Id": "stu002",
+    "name": "Sajad",
+    "fathername": "Sarwar",
+    "lastname": "_",
+    "phone": "-",
+    "email": "-",
+    "joinDate": "_",
+    "presence": "Active",
+    "profileImage": "./logo.png",
+    "ClassJourny": [
+      {
+        "round": "A",
+        "teacher": "tch001",
+        "ClassName": "junior one one",
+        "time": "1:30 - 2:30",
+        "middleTestScore": 0,
+        "finalTestScore": 0,
+        "fee": 100,
+        "billNumber": "_",
+        "feeState": "not paid"
+      }
+    ]
+  },
+  {
+    "Id": "stu003",
+    "name": "Ali Ahmad",
+    "fathername": "Ghulam Jan",
+    "lastname": "",
+    "phone": "-",
+    "email": "-",
+    "joinDate": "_",
+    "presence": "Active",
+    "profileImage": "./logo.png",
+    "ClassJourny": [
+      {
+        "round": "A",
+        "teacher": "tch001",
+        "ClassName": "junior one",
+        "time": "1:30 - 2:30",
+        "middleTestScore": 0,
+        "finalTestScore": 0,
+        "fee": 100,
+        "billNumber": "_",
+        "feeState": "not paid"
+      }
+    ]
+  },
+  {
+    "Id": "stu004",
+    "name": "Nadia",
+    "fathername": "",
+    "lastname": "",
+    "phone": "-",
+    "email": "-",
+    "joinDate": "_",
+    "presence": "Active",
+    "profileImage": "./logo.png",
+    "ClassJourny": [
+      {
+        "round": "A",
+        "teacher": "tch001",
+        "ClassName": "let's go three",
+        "time": "2:30 - 3:30",
+        "middleTestScore": 0,
+        "finalTestScore": 0,
+        "fee": 50,
+        "billNumber": "_",
+        "feeState": "not paid"
+      }
+    ]
+  },
+  {
+    "Id": "stu005",
+    "name": "Maisam",
+    "fathername": "",
+    "lastname": "",
+    "phone": "-",
+    "email": "-",
+    "joinDate": "_",
+    "presence": "Active",
+    "profileImage": "./logo.png",
+    "ClassJourny": [
+      {
+        "round": "A",
+        "teacher": "tch001",
+        "ClassName": "let's go three",
+        "time": "2:30 - 3:30",
         "middleTestScore": 0,
         "finalTestScore": 0,
         "fee": 0,
         "billNumber": "_",
-        "feeState": "_"
+        "feeState": "not paid"
+      }
+    ]
+  },
+  {
+    "Id": "stu006",
+    "name": "Suhaila",
+    "fathername": "",
+    "lastname": "",
+    "phone": "-",
+    "email": "-",
+    "joinDate": "_",
+    "presence": "Active",
+    "profileImage": "./logo.png",
+    "ClassJourny": [
+      {
+        "round": "A",
+        "teacher": "tch001",
+        "ClassName": "let's go three",
+        "time": "2:30 - 3:30",
+        "middleTestScore": 0,
+        "finalTestScore": 0,
+        "fee": 50,
+        "billNumber": "_",
+        "feeState": "paid"
+      }
+    ]
+  },
+  {
+    "Id": "stu007",
+    "name": "Mohammad",
+    "fathername": "Naqi",
+    "lastname": "",
+    "phone": "-",
+    "email": "-",
+    "joinDate": "_",
+    "presence": "Active",
+    "profileImage": "./logo.png",
+    "ClassJourny": [
+      {
+        "round": "A",
+        "teacher": "tch001",
+        "ClassName": "junior two",
+        "time": "4:00 - 5:00",
+        "middleTestScore": 24,
+        "finalTestScore": 0,
+        "fee": 100,
+        "billNumber": "_",
+        "feeState": "paid"
+      }
+    ]
+  },
+  {
+    "Id": "stu008",
+    "name": "Mahdi",
+    "fathername": "",
+    "lastname": "",
+    "phone": "-",
+    "email": "-",
+    "joinDate": "_",
+    "presence": "Active",
+    "profileImage": "./logo.png",
+    "ClassJourny": [
+      {
+        "round": "A",
+        "teacher": "tch001",
+        "ClassName": "junior two",
+        "time": "4:00 - 5:00",
+        "middleTestScore": 23,
+        "finalTestScore": 0,
+        "fee": 100,
+        "billNumber": "_",
+        "feeState": "not paid"
+      }
+    ]
+  },
+  {
+    "Id": "stu009",
+    "name": "Sajad",
+    "fathername": "",
+    "lastname": "",
+    "phone": "-",
+    "email": "-",
+    "joinDate": "_",
+    "presence": "Active",
+    "profileImage": "./logo.png",
+    "ClassJourny": [
+      {
+        "round": "A",
+        "teacher": "tch001",
+        "ClassName": "junior two",
+        "time": "4:00 - 5:00",
+        "middleTestScore": 16,
+        "finalTestScore": 0,
+        "fee": 100,
+        "billNumber": "_",
+        "feeState": "not paid"
+      }
+    ]
+  },
+  {
+    "Id": "stu010",
+    "name": "Hussain",
+    "fathername": "",
+    "lastname": "",
+    "phone": "-",
+    "email": "-",
+    "joinDate": "_",
+    "presence": "Active",
+    "profileImage": "./logo.png",
+    "ClassJourny": [
+      {
+        "round": "A",
+        "teacher": "tch001",
+        "ClassName": "junior two",
+        "time": "4:00 - 5:00",
+        "middleTestScore": 23,
+        "finalTestScore": 0,
+        "fee": 100,
+        "billNumber": "_",
+        "feeState": "not paid"
+      }
+    ]
+  },
+  {
+    "Id": "stu011",
+    "name": "Nargis",
+    "fathername": "yosuf",
+    "lastname": "",
+    "phone": "-",
+    "email": "-",
+    "joinDate": "_",
+    "presence": "Active",
+    "profileImage": "./logo.png",
+    "ClassJourny": [
+      {
+        "round": "A",
+        "teacher": "tch001",
+        "ClassName": "junior two",
+        "time": "4:00 - 5:00",
+        "middleTestScore": 17,
+        "finalTestScore": 0,
+        "fee": 100,
+        "billNumber": "_",
+        "feeState": "paid"
+      }
+    ]
+  },
+  {
+    "Id": "stu012",
+    "name": "Zahra",
+    "fathername": "yosuf",
+    "lastname": "",
+    "phone": "-",
+    "email": "-",
+    "joinDate": "_",
+    "presence": "Active",
+    "profileImage": "./logo.png",
+    "ClassJourny": [
+      {
+        "round": "A",
+        "teacher": "tch001",
+        "ClassName": "junior two",
+        "time": "4:00 - 5:00",
+        "middleTestScore": 15,
+        "finalTestScore": 0,
+        "fee": 100,
+        "billNumber": "_",
+        "feeState": "paid"
+      }
+    ]
+  },
+  {
+    "Id": "stu013",
+    "name": "Gulsom",
+    "fathername": "",
+    "lastname": "",
+    "phone": "-",
+    "email": "-",
+    "joinDate": "_",
+    "presence": "Active",
+    "profileImage": "./logo.png",
+    "ClassJourny": [
+      {
+        "round": "A",
+        "teacher": "tch001",
+        "ClassName": "junior two",
+        "time": "4:00 - 5:00",
+        "middleTestScore": 12,
+        "finalTestScore": 0,
+        "fee": 100,
+        "billNumber": "_",
+        "feeState": "paid"
       }
     ]
   }
