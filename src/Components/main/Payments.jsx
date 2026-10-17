@@ -16,20 +16,34 @@ const formatAmount = (amount) =>
 const Payments = () => {
   const [paymentType, setPaymentType] = useState("students");
   const [statusFilter, setStatusFilter] = useState("All status");
+  const [roundFilter, setRoundFilter] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
 
-  const studentPayments = StudentList.flatMap((student) =>
-    (student.ClassJourny ?? []).map((journey, index) => ({
-      id: `${student.Id}-${index}`,
-      party: student.name,
-      partyId: student.Id,
-      detail: journey.ClassName || "Class not assigned",
-      round: journey.round || "-",
-      reference: journey.billNumber || "-",
-      amount: Number(journey.fee) || 0,
-      status: journey.feeState?.toLowerCase() === "paid" ? "Paid" : "Pending",
-    })),
-  );
+  const studentPayments = StudentList.flatMap((student) => {
+    const journey = student.ClassJourny?.at(-1);
+    return journey
+      ? [
+          {
+            id: student.Id,
+            party: student.name,
+            partyId: student.Id,
+            detail: journey.ClassName || "Class not assigned",
+            round: journey.round || "-",
+            reference: journey.billNumber || "-",
+            amount: Number(journey.fee) || 0,
+            status:
+              journey.feeState?.toLowerCase() === "paid" ? "Paid" : "Pending",
+          },
+        ]
+      : [];
+  });
+  const studentRounds = [
+    ...new Set(
+      studentPayments
+        .map((payment) => payment.round)
+        .filter((round) => round !== "-"),
+    ),
+  ].sort();
   const teacherPayments = TeacherList.flatMap((teacher) =>
     (teacher.salary ?? []).map((salary, index) => ({
       id: `${teacher.Id}-${index}`,
@@ -42,11 +56,14 @@ const Payments = () => {
       status: salary.salaryState?.toLowerCase() === "paid" ? "Paid" : "Pending",
     })),
   );
-  const allFeeAmount = studentPayments.reduce(
+  const summaryPayments = roundFilter
+    ? studentPayments.filter((payment) => payment.round === roundFilter)
+    : studentPayments;
+  const allFeeAmount = summaryPayments.reduce(
     (total, payment) => total + payment.amount,
     0,
   );
-  const collectedAmount = studentPayments
+  const collectedAmount = summaryPayments
     .filter((payment) => payment.status === "Paid")
     .reduce((total, payment) => total + payment.amount, 0);
   const outstandingAmount = allFeeAmount - collectedAmount;
@@ -59,6 +76,10 @@ const Payments = () => {
   const visiblePayments = sourcePayments.filter((payment) => {
     const matchesStatus =
       statusFilter === "All status" || payment.status === statusFilter;
+    const matchesRound =
+      paymentType !== "students" ||
+      !roundFilter ||
+      payment.round === roundFilter;
     const matchesQuery =
       !normalizedQuery ||
       [
@@ -68,7 +89,7 @@ const Payments = () => {
         payment.round,
         payment.reference,
       ].some((value) => value.toLowerCase().includes(normalizedQuery));
-    return matchesStatus && matchesQuery;
+    return matchesStatus && matchesRound && matchesQuery;
   });
   const collectionRate = allFeeAmount
     ? Math.round((collectedAmount / allFeeAmount) * 100)
@@ -77,7 +98,7 @@ const Payments = () => {
     {
       label: "Fees billed",
       value: formatAmount(allFeeAmount),
-      detail: `${studentPayments.length} student records`,
+      detail: `${summaryPayments.length} student records`,
       icon: LuWallet,
       accent: "text-sky-300",
     },
@@ -91,7 +112,7 @@ const Payments = () => {
     {
       label: "Outstanding",
       value: formatAmount(outstandingAmount),
-      detail: `${studentPayments.filter((payment) => payment.status === "Pending").length} unpaid records`,
+      detail: `${summaryPayments.filter((payment) => payment.status === "Pending").length} unpaid records`,
       icon: LuArrowDownLeft,
       accent: "text-amber-300",
     },
@@ -193,6 +214,24 @@ const Payments = () => {
                   className="h-10 w-full rounded-lg border border-white/10 bg-gray-800/70 pl-9 pr-3 text-sm text-white placeholder:text-white/35 focus:border-emerald-300/50"
                 />
               </label>
+              {paymentType === "students" && (
+                <label className="flex min-w-0 flex-col gap-1 text-xs text-white/50 sm:w-36">
+                  Round
+                  <select
+                    value={roundFilter}
+                    onChange={(event) => setRoundFilter(event.target.value)}
+                    aria-label="Filter student payments by round"
+                    className="h-10 w-full rounded-lg border border-white/10 bg-gray-800/70 px-3 text-sm text-white focus:border-emerald-300/50"
+                  >
+                    <option value="">All rounds</option>
+                    {studentRounds.map((round) => (
+                      <option key={round} value={round}>
+                        {round}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+              )}
             </div>
           </div>
 

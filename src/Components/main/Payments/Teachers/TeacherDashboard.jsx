@@ -4,6 +4,7 @@ import StudentsChart from "../../../Charts/StudentsChart";
 import {
   LuBell,
   LuBookOpen,
+  LuCalendar,
   LuChevronLeft,
   LuGraduationCap,
   LuSettings,
@@ -54,6 +55,16 @@ const TeacherDashboard = ({ logedInPerson = {} }) => {
               >
                 <LuBell size={18} />
               </Link>
+
+              <Link
+                to={"TimeTable"}
+                aria-label="TimeTable"
+                title="TimeTable"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-slate-950/40 text-white shadow-lg backdrop-blur-md transition hover:border-cyan-300/50 hover:bg-cyan-300/10 hover:text-cyan-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300"
+              >
+                <LuCalendar size={18} />
+              </Link>
+
               <Link
                 to={"Settings"}
                 aria-label="Settings"

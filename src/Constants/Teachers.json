@@ -78,10 +78,10 @@
     "subject": "Math English",
     "classes": [
       {
-        "levelName": "Let's go Two",
-        "round": "A",
-        "time": "1:30 - 2:30",
-        "classState": "upcoming"
+        "levelName": "Let's go Three",
+        "round": "B",
+        "time": "3:00 - 4:00",
+        "classState": "Inprogress"
       },
       {
         "levelName": " ( حساب و الجبر) ریاضیات",

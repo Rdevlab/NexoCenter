@@ -6,6 +6,7 @@ import ClassesChart from "../Charts/ClassesChart";
 import PayementsChart from "../Charts/PayementsChart";
 import TestsChart from "../Charts/TestsChart";
 import AttendanceChart from "../Charts/AttendanceChart";
+import { Link } from "react-router-dom";
 
 const Dashboard = ({ logedInPerson = {} }) => {
   const fullName = [logedInPerson.firstName, logedInPerson.lastName]
@@ -26,7 +27,9 @@ const Dashboard = ({ logedInPerson = {} }) => {
           <h1 className="font-bold text-xl">{fullName || "User"}</h1>
         </div>
         <button>
-          <LuLogOut />
+          <Link to={"/LoginForm"}>
+            <LuLogOut />
+          </Link>
         </button>
       </nav>
       {/* content section */}

@@ -17,7 +17,7 @@
         "time": "1:30 - 2:30",
         "middleTestScore": 0,
         "finalTestScore": 0,
-        "fee": 100,
+        "fee": 150,
         "billNumber": "_",
         "feeState": "not paid"
       }
@@ -41,7 +41,7 @@
         "time": "1:30 - 2:30",
         "middleTestScore": 0,
         "finalTestScore": 0,
-        "fee": 100,
+        "fee": 150,
         "billNumber": "_",
         "feeState": "not paid"
       }
@@ -92,6 +92,17 @@
         "fee": 50,
         "billNumber": "_",
         "feeState": "not paid"
+      },
+      {
+        "round": "B",
+        "teacher": "tch002",
+        "ClassName": "let's go three",
+        "time": "2:30 - 3:30",
+        "middleTestScore": 0,
+        "finalTestScore": 0,
+        "fee": 50,
+        "billNumber": "_",
+        "feeState": "not paid"
       }
     ]
   },
@@ -113,7 +124,18 @@
         "time": "2:30 - 3:30",
         "middleTestScore": 0,
         "finalTestScore": 0,
-        "fee": 0,
+        "fee": 50,
+        "billNumber": "_",
+        "feeState": "not paid"
+      },
+      {
+        "round": "B",
+        "teacher": "tch002",
+        "ClassName": "let's go three",
+        "time": "3:00 - 4:00",
+        "middleTestScore": 0,
+        "finalTestScore": 0,
+        "fee": 50,
         "billNumber": "_",
         "feeState": "not paid"
       }
@@ -135,6 +157,17 @@
         "teacher": "tch001",
         "ClassName": "let's go three",
         "time": "2:30 - 3:30",
+        "middleTestScore": 0,
+        "finalTestScore": 0,
+        "fee": 50,
+        "billNumber": "_",
+        "feeState": "paid"
+      },
+      {
+        "round": "B",
+        "teacher": "tch002",
+        "ClassName": "let's go three",
+        "time": "3:00 - 4:00",
         "middleTestScore": 0,
         "finalTestScore": 0,
         "fee": 50,
@@ -187,7 +220,7 @@
         "finalTestScore": 0,
         "fee": 100,
         "billNumber": "_",
-        "feeState": "not paid"
+        "feeState": "paid"
       }
     ]
   },

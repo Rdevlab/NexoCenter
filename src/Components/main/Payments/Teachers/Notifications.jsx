@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import notificationsData from "../../../../Constants/Notifications.json";
 import { Link } from "react-router-dom";
-import { LuBell, LuChevronLeft, LuSettings2 } from "react-icons/lu";
+import { LuChevronLeft } from "react-icons/lu";
 
 const getNotificationKey = (notification) =>
   `${notification.reciever}:${notification.timestamp}:${notification.sender}:${notification.message}`;
@@ -116,7 +116,7 @@ const Notifications = (props) => {
     <div className="text-white w-full h-full overflow-hidden flex flex-col gap-2 p-4 pb-20">
       <div className=" left-4 right-4 top-4 z-20 flex items-center justify-between sm:left-6 sm:right-6">
         <Link
-          to={""}
+          to={"/Teacher/Dashboard/"}
           aria-label="Back to login"
           title="Back to login"
           className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-slate-950/40 text-white shadow-lg backdrop-blur-md transition hover:border-white/30 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300"

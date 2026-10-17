@@ -1,0 +1,502 @@
+[
+  {
+    "levelName": "Let's go one",
+    "assests": ["Let's go one (5th)", "Gramar Chapter"],
+    "Assignments": ["no assignments"],
+    "week": [
+      {
+        "day": "Saturday",
+        "content": ["Dectation", "Book", "Word"]
+      },
+      {
+        "day": "Sunday",
+        "content": ["Dectation", "Book", "Word"]
+      },
+      {
+        "day": "Monday",
+        "content": ["Dectation", "Book", "Word"]
+      },
+      {
+        "day": "Tuesday",
+        "content": ["Dectation", "Grammar"]
+      },
+      {
+        "day": "Wednesday",
+        "content": ["Dectation", "Book", "Word"]
+      },
+      {
+        "day": "Thursday",
+        "content": ["Dectation", "Book", "Word", "quiz"]
+      }
+    ]
+  },
+  {
+    "levelName": "Let's go two",
+    "assests": ["Let's go two (5th)", "Gramar Chapter"],
+    "Assignments": ["no assignments"],
+    "week": [
+      {
+        "day": "Saturday",
+        "content": ["Book", "Word"]
+      },
+      {
+        "day": "Sunday",
+        "content": ["Book", "Word"]
+      },
+      {
+        "day": "Monday",
+        "content": ["Book", "Word"]
+      },
+      {
+        "day": "Tuesday",
+        "content": ["Grammar"]
+      },
+      {
+        "day": "Wednesday",
+        "content": ["Book", "Word"]
+      },
+      {
+        "day": "Thursday",
+        "content": ["Book", "Word", "quiz"]
+      }
+    ]
+  },
+  {
+    "levelName": "Let's go three",
+    "assests": ["Let's go three (5th)", "Gramar Chapter"],
+    "Assignments": ["no assignments"],
+    "week": [
+      {
+        "day": "Saturday",
+        "content": ["Book", "Word"]
+      },
+      {
+        "day": "Sunday",
+        "content": ["Book", "Word"]
+      },
+      {
+        "day": "Monday",
+        "content": ["Book", "Word"]
+      },
+      {
+        "day": "Tuesday",
+        "content": ["Grammar"]
+      },
+      {
+        "day": "Wednesday",
+        "content": ["Book", "Word"]
+      },
+      {
+        "day": "Thursday",
+        "content": ["Book", "Word", "quiz"]
+      }
+    ]
+  },
+  {
+    "levelName": "Junior one",
+    "assests": [
+      "American English file starter (3th)",
+      "Gramar Chapter",
+      "4000 essential words 1"
+    ],
+    "Assignments": ["40 pages dairy"],
+    "week": [
+      {
+        "day": "Saturday",
+        "content": ["Fresh news", "Topic", "4000 words"]
+      },
+      {
+        "day": "Sunday",
+        "content": ["Fresh news", "Book", "4000 words"]
+      },
+      {
+        "day": "Monday",
+        "content": ["Fresh news", "Book", "4000 words"]
+      },
+      {
+        "day": "Tuesday",
+        "content": ["Fresh news", "Grammar", "4000 words", "Conversation"]
+      },
+      {
+        "day": "Wednesday",
+        "content": ["Fresh news", "Book", "4000 words"]
+      },
+      {
+        "day": "Thursday",
+        "content": ["Fresh news", "Book", "4000 words", "quiz"]
+      }
+    ]
+  },
+  {
+    "levelName": "Junior two",
+    "assests": ["Let's go one (5th)", "Gramar Chapter"],
+    "Assignments": ["60 pages dairy"],
+    "week": [
+      {
+        "day": "Saturday",
+        "content": ["Fresh news", "Topic", "4000 words"]
+      },
+      {
+        "day": "Sunday",
+        "content": ["Fresh news", "Book", "4000 words"]
+      },
+      {
+        "day": "Monday",
+        "content": ["Fresh news", "Book", "4000 words"]
+      },
+      {
+        "day": "Tuesday",
+        "content": ["Fresh news", "Grammar", "4000 words", "Conversation"]
+      },
+      {
+        "day": "Wednesday",
+        "content": ["Fresh news", "Book", "4000 words"]
+      },
+      {
+        "day": "Thursday",
+        "content": ["Fresh news", "Book", "4000 words", "quiz"]
+      }
+    ]
+  },
+  {
+    "levelName": "Junior three",
+    "assests": ["Let's go one (5th)", "Gramar Chapter"],
+    "Assignments": ["80 pages dairy"],
+    "week": [
+      {
+        "day": "Saturday",
+        "content": ["Fresh news", "Topic", "4000 words"]
+      },
+      {
+        "day": "Sunday",
+        "content": ["Fresh news", "Book", "4000 words"]
+      },
+      {
+        "day": "Monday",
+        "content": ["Fresh news", "Book", "4000 words"]
+      },
+      {
+        "day": "Tuesday",
+        "content": ["Fresh news", "Grammar", "4000 words", "Conversation"]
+      },
+      {
+        "day": "Wednesday",
+        "content": ["Fresh news", "Book", "4000 words"]
+      },
+      {
+        "day": "Thursday",
+        "content": ["Fresh news", "Book", "4000 words", "quiz"]
+      }
+    ]
+  },
+  {
+    "levelName": "Senior one",
+    "assests": ["Let's go one (5th)", "Gramar Chapter"],
+    "Assignments": ["100 pages dariy", "movie review", "book review"],
+    "week": [
+      {
+        "day": "Saturday",
+        "content": ["Fresh news", "Topic", "4000 words"]
+      },
+      {
+        "day": "Sunday",
+        "content": ["Fresh news", "Book", "4000 words"]
+      },
+      {
+        "day": "Monday",
+        "content": ["Fresh news", "Book", "4000 words"]
+      },
+      {
+        "day": "Tuesday",
+        "content": ["Fresh news", "Grammar", "4000 words", "Conversation"]
+      },
+      {
+        "day": "Wednesday",
+        "content": ["Fresh news", "Book", "4000 words"]
+      },
+      {
+        "day": "Thursday",
+        "content": ["Fresh news", "Book", "4000 words", "quiz"]
+      }
+    ]
+  },
+  {
+    "levelName": "Senior three",
+    "assests": ["Let's go one (5th)", "Gramar Chapter"],
+    "Assignments": ["100 pages dariy", "movie review", "book review"],
+    "week": [
+      {
+        "day": "Saturday",
+        "content": ["Book", "Word"]
+      },
+      {
+        "day": "Sunday",
+        "content": ["Book", "Word"]
+      },
+      {
+        "day": "Monday",
+        "content": ["Book", "Word"]
+      },
+      {
+        "day": "Tuesday",
+        "content": ["Grammar"]
+      },
+      {
+        "day": "Wednesday",
+        "content": ["Book", "Word"]
+      },
+      {
+        "day": "Thursday",
+        "content": ["Book", "Word", "quiz"]
+      }
+    ]
+  },
+  {
+    "levelName": "Level one",
+    "assests": ["Let's go one (5th)", "Gramar Chapter"],
+    "Assignments": ["100 pages dariy", "movie review", "book review"],
+    "week": [
+      {
+        "day": "Saturday",
+        "content": ["Book", "Word"]
+      },
+      {
+        "day": "Sunday",
+        "content": ["Book", "Word"]
+      },
+      {
+        "day": "Monday",
+        "content": ["Book", "Word"]
+      },
+      {
+        "day": "Tuesday",
+        "content": ["Grammar"]
+      },
+      {
+        "day": "Wednesday",
+        "content": ["Book", "Word"]
+      },
+      {
+        "day": "Thursday",
+        "content": ["Book", "Word", "quiz"]
+      }
+    ]
+  },
+  {
+    "levelName": "Level two",
+    "assests": ["Let's go one (5th)", "Gramar Chapter"],
+    "Assignments": ["100 pages dariy", "movie review", "book review"],
+    "week": [
+      {
+        "day": "Saturday",
+        "content": ["Book", "Word"]
+      },
+      {
+        "day": "Sunday",
+        "content": ["Book", "Word"]
+      },
+      {
+        "day": "Monday",
+        "content": ["Book", "Word"]
+      },
+      {
+        "day": "Tuesday",
+        "content": ["Grammar"]
+      },
+      {
+        "day": "Wednesday",
+        "content": ["Book", "Word"]
+      },
+      {
+        "day": "Thursday",
+        "content": ["Book", "Word", "quiz"]
+      }
+    ]
+  },
+  {
+    "levelName": "Level three",
+    "assests": ["Let's go one (5th)", "Gramar Chapter"],
+    "Assignments": ["100 pages dariy", "movie review", "book review"],
+    "week": [
+      {
+        "day": "Saturday",
+        "content": ["Book", "Word"]
+      },
+      {
+        "day": "Sunday",
+        "content": ["Book", "Word"]
+      },
+      {
+        "day": "Monday",
+        "content": ["Book", "Word"]
+      },
+      {
+        "day": "Tuesday",
+        "content": ["Grammar"]
+      },
+      {
+        "day": "Wednesday",
+        "content": ["Book", "Word"]
+      },
+      {
+        "day": "Thursday",
+        "content": ["Book", "Word", "quiz"]
+      }
+    ]
+  },
+  {
+    "levelName": "Level five",
+    "assests": ["Let's go one (5th)", "Gramar Chapter"],
+    "Assignments": ["100 pages dariy", "movie review", "book review"],
+    "week": [
+      {
+        "day": "Saturday",
+        "content": ["Book", "Word"]
+      },
+      {
+        "day": "Sunday",
+        "content": ["Book", "Word"]
+      },
+      {
+        "day": "Monday",
+        "content": ["Book", "Word"]
+      },
+      {
+        "day": "Tuesday",
+        "content": ["Grammar"]
+      },
+      {
+        "day": "Wednesday",
+        "content": ["Book", "Word"]
+      },
+      {
+        "day": "Thursday",
+        "content": ["Book", "Word", "quiz"]
+      }
+    ]
+  },
+  {
+    "levelName": "Level six",
+    "assests": ["Let's go one (5th)", "Gramar Chapter"],
+    "Assignments": ["100 pages dariy", "movie review", "book review"],
+    "week": [
+      {
+        "day": "Saturday",
+        "content": ["Book", "Word"]
+      },
+      {
+        "day": "Sunday",
+        "content": ["Book", "Word"]
+      },
+      {
+        "day": "Monday",
+        "content": ["Book", "Word"]
+      },
+      {
+        "day": "Tuesday",
+        "content": ["Grammar"]
+      },
+      {
+        "day": "Wednesday",
+        "content": ["Book", "Word"]
+      },
+      {
+        "day": "Thursday",
+        "content": ["Book", "Word", "quiz"]
+      }
+    ]
+  },
+  {
+    "levelName": "Pre Adnvace",
+    "assests": ["Let's go one (5th)", "Gramar Chapter"],
+    "Assignments": ["100 pages dariy", "movie review", "book review", "essay"],
+    "week": [
+      {
+        "day": "Saturday",
+        "content": ["Book", "Word"]
+      },
+      {
+        "day": "Sunday",
+        "content": ["Book", "Word"]
+      },
+      {
+        "day": "Monday",
+        "content": ["Book", "Word"]
+      },
+      {
+        "day": "Tuesday",
+        "content": ["Grammar"]
+      },
+      {
+        "day": "Wednesday",
+        "content": ["Book", "Word"]
+      },
+      {
+        "day": "Thursday",
+        "content": ["Book", "Word", "quiz"]
+      }
+    ]
+  },
+  {
+    "levelName": "Advance A",
+    "assests": ["Let's go one (5th)", "Gramar Chapter"],
+    "Assignments": ["100 pages dariy", "movie review", "book review", "essay"],
+    "week": [
+      {
+        "day": "Saturday",
+        "content": ["Book", "Word"]
+      },
+      {
+        "day": "Sunday",
+        "content": ["Book", "Word"]
+      },
+      {
+        "day": "Monday",
+        "content": ["Book", "Word"]
+      },
+      {
+        "day": "Tuesday",
+        "content": ["Grammar"]
+      },
+      {
+        "day": "Wednesday",
+        "content": ["Book", "Word"]
+      },
+      {
+        "day": "Thursday",
+        "content": ["Book", "Word", "quiz"]
+      }
+    ]
+  },
+  {
+    "levelName": "Advance B",
+    "assests": ["Let's go one (5th)", "Gramar Chapter"],
+    "Assignments": ["100 pages dariy", "movie review", "book review", "essay"],
+    "week": [
+      {
+        "day": "Saturday",
+        "content": ["Book", "Word"]
+      },
+      {
+        "day": "Sunday",
+        "content": ["Book", "Word"]
+      },
+      {
+        "day": "Monday",
+        "content": ["Book", "Word"]
+      },
+      {
+        "day": "Tuesday",
+        "content": ["Grammar"]
+      },
+      {
+        "day": "Wednesday",
+        "content": ["Book", "Word"]
+      },
+      {
+        "day": "Thursday",
+        "content": ["Book", "Word", "quiz"]
+      }
+    ]
+  }
+]
